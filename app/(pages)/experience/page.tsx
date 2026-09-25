@@ -48,7 +48,7 @@ export default function ExperiencePage() {
           {currentRole && (
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+                <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
                   {currentRole.appointmentTag}
                 </span>
                 <span className="h-px flex-1 bg-ink-rule"></span>
@@ -58,7 +58,7 @@ export default function ExperiencePage() {
                 {currentRole.company} — {currentRole.role}
               </h4>
 
-              <div className="py-1 border-t border-b border-ink-rule/20 flex flex-wrap items-center justify-between text-[11px] font-sans uppercase tracking-wider text-ink-subtle">
+              <div className="py-1 border-t border-b border-ink-rule/20 flex flex-wrap items-center justify-between text-fine font-sans uppercase tracking-wider text-ink-subtle">
                 <span className="font-bold text-ink-primary">
                   PERIOD: {currentRole.period}
                 </span>
@@ -73,7 +73,7 @@ export default function ExperiencePage() {
                 <p className="newspaper-columns">{currentRole.narrative}</p>
 
                 <div className="bg-paper-card border border-ink-rule p-3 my-3">
-                  <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-ink-primary mb-2 border-b border-ink-rule pb-1">
+                  <div className="font-sans text-xs-compact font-bold uppercase tracking-wider text-ink-primary mb-2 border-b border-ink-rule pb-1">
                     KEY RESPONSIBILITIES &amp; ACHIEVEMENTS:
                   </div>
                   <ul className="space-y-2 text-xs sm:text-sm font-serif">
@@ -91,7 +91,7 @@ export default function ExperiencePage() {
 
               {/* Technologies */}
               <div className="pt-2 border-t border-dashed border-ink-rule/30">
-                <div className="text-[10px] font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1.5">
+                <div className="text-xs-compact font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1.5">
                   TECHNOLOGIES USED:
                 </div>
                 <div className="flex flex-wrap gap-1.5">
@@ -114,7 +114,7 @@ export default function ExperiencePage() {
           {internRole && (
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <span className="bg-ink-subtle text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+                <span className="bg-ink-subtle text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
                   {internRole.appointmentTag}
                 </span>
                 <span className="h-px flex-1 bg-ink-subtle"></span>
@@ -124,7 +124,7 @@ export default function ExperiencePage() {
                 {internRole.company} — {internRole.role}
               </h4>
 
-              <div className="py-1 border-t border-b border-ink-rule/20 flex flex-wrap items-center justify-between text-[11px] font-sans uppercase tracking-wider text-ink-subtle">
+              <div className="py-1 border-t border-b border-ink-rule/20 flex flex-wrap items-center justify-between text-fine font-sans uppercase tracking-wider text-ink-subtle">
                 <span className="font-bold text-ink-primary">
                   PERIOD: {internRole.period}
                 </span>
@@ -154,14 +154,14 @@ export default function ExperiencePage() {
 
               {/* Technologies */}
               <div className="pt-2 border-t border-dashed border-ink-rule/30">
-                <div className="text-[10px] font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1.5">
+                <div className="text-xs-compact font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1.5">
                   TECHNOLOGIES USED:
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {internRole.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 text-[11px] font-sans font-semibold border border-ink-rule/30 bg-paper-card text-ink-dark"
+                      className="px-2 py-0.5 text-fine font-sans font-semibold border border-ink-rule/30 bg-paper-card text-ink-dark"
                     >
                       {tech}
                     </span>
@@ -176,7 +176,7 @@ export default function ExperiencePage() {
         <div className="lg:col-span-4 lg:pl-6 pt-6 lg:pt-0 space-y-6">
           {/* Company Dossier */}
           <div className="p-3 border-2 border-ink-rule bg-paper-card">
-            <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-1 mb-2">
+            <div className="font-sans text-xs-compact font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-1 mb-2">
               {dossier.title}
             </div>
             <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
@@ -185,14 +185,14 @@ export default function ExperiencePage() {
             <p className="font-serif text-xs leading-relaxed text-ink-subtle mt-1">
               {dossier.description}
             </p>
-            <div className="mt-3 pt-2 border-t border-ink-rule/20 text-[11px] font-mono text-ink-body">
+            <div className="mt-3 pt-2 border-t border-ink-rule/20 text-fine font-mono text-ink-body">
               {dossier.headquarters}
             </div>
           </div>
 
           {/* Editorial Notes on Team Work */}
           <div className="p-3 border border-ink-rule bg-paper-white space-y-2">
-            <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-1">
+            <div className="font-sans text-xs-compact font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-1">
               {culture.title}
             </div>
             <p className="font-serif text-xs leading-relaxed text-ink-dark newspaper-columns">

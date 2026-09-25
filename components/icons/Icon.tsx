@@ -1,12 +1,29 @@
 "use client";
 
-import { Icon as IconifyIcon, IconProps } from "@iconify/react";
+import { type IconName } from "@/constants/tokens/icons";
+import { Icon as IconifyIcon, type IconProps } from "@iconify/react";
+import { getBundledIcon } from "./icon-data";
 
-interface AppIconProps extends Omit<IconProps, "icon"> {
-  icon: string;
+export interface AppIconProps extends Omit<IconProps, "icon"> {
+  name?: IconName;
+  icon?: IconName | string;
   className?: string;
 }
 
-export default function Icon({ icon, className = "", ...props }: AppIconProps) {
-  return <IconifyIcon icon={icon} className={`inline-block shrink-0 ${className}`} {...props} />;
+export default function Icon({
+  name,
+  icon,
+  className = "",
+  ...props
+}: AppIconProps) {
+  const target = name || icon;
+  const iconData = getBundledIcon(target);
+
+  return (
+    <IconifyIcon
+      icon={iconData}
+      className={`inline-block shrink-0 ${className}`}
+      {...props}
+    />
+  );
 }

@@ -41,6 +41,13 @@
   --font-body: var(--font-newsreader), "EB Garamond", "Times New Roman", serif;
   --font-title: var(--font-cinzel), "Times New Roman", serif;
   --font-mono: var(--font-mono), monospace;
+
+  /* Editorial Custom Text Sizes */
+  --text-3xs: 8px;
+  --text-2xs: 9px;
+  --text-xs-compact: 10px;
+  --text-fine: 11px;
+  --text-nav: 13px;
 }
 
 /* Base Body Styles */

@@ -52,7 +52,7 @@ export default function SkillsPage() {
                 <h4 className="font-headline font-black text-lg uppercase text-ink-primary tracking-wide">
                   {cat.category}
                 </h4>
-                <span className="text-[10px] font-sans font-bold bg-ink-primary text-paper-card px-1.5 py-0.5 uppercase">
+                <span className="text-xs-compact font-sans font-bold bg-ink-primary text-paper-card px-1.5 py-0.5 uppercase">
                   {cat.skills.length} ITEMS
                 </span>
               </div>
@@ -77,13 +77,13 @@ export default function SkillsPage() {
                         </span>
                       </div>
                       {skill.level && (
-                        <span className="text-[10px] font-mono font-semibold uppercase text-neutral-600 bg-paper-white px-1.5 py-0.5 border border-ink-rule/20">
+                        <span className="text-xs-compact font-mono font-semibold uppercase text-neutral-600 bg-paper-white px-1.5 py-0.5 border border-ink-rule/20">
                           {skill.level}
                         </span>
                       )}
                     </div>
                     {skill.note && (
-                      <p className="font-serif text-[11px] text-ink-muted mt-1 pl-6">
+                      <p className="font-serif text-fine text-ink-muted mt-1 pl-6">
                         {skill.note}
                       </p>
                     )}
@@ -94,7 +94,7 @@ export default function SkillsPage() {
 
             {/* Bottom Tag */}
             <div className="mt-4 pt-2 border-t border-dashed border-ink-rule/30 text-right">
-              <span className="font-mono text-[9px] uppercase tracking-wider text-ink-light">
+              <span className="font-mono text-2xs uppercase tracking-wider text-ink-light">
                 STATUS: VERIFIED
               </span>
             </div>
@@ -107,7 +107,7 @@ export default function SkillsPage() {
       {/* Editorial Skill Summary Notice */}
       <div className="p-4 bg-paper-card border-2 border-ink-rule grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-2 space-y-1">
-          <div className="font-sans font-bold text-[10px] uppercase tracking-wider text-ink-primary">
+          <div className="font-sans font-bold text-xs-compact uppercase tracking-wider text-ink-primary">
             {takeaway.kicker}
           </div>
           <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
@@ -122,7 +122,7 @@ export default function SkillsPage() {
           <div className="text-xs font-serif italic text-ink-subtle mb-2">
             &ldquo;{takeaway.quote}&rdquo;
           </div>
-          <div className="text-[10px] font-mono text-ink-light">
+          <div className="text-xs-compact font-mono text-ink-light">
             {takeaway.versionNote}
           </div>
         </div>

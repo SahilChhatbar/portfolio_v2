@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface NavItem {
   name: string;
@@ -22,6 +22,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [prevPathname, setPrevPathname] = useState(pathname);
+  const mobileNavRef = useRef<HTMLDivElement>(null);
 
   // Reset menu open state on route change
   if (prevPathname !== pathname) {
@@ -29,11 +30,45 @@ export default function Navigation() {
     setIsOpen(false);
   }
 
+  // Smoothly collapse menu on outside click or scroll elsewhere
+  useEffect(() => {
+    if (!isOpen) return;
+
+    const handleScroll = () => {
+      setIsOpen(false);
+    };
+
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        mobileNavRef.current &&
+        !mobileNavRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isOpen]);
+
+  const activeItem = NAV_ITEMS.find((item) =>
+    item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+  );
+
   return (
-    <nav className="w-full bg-paper-bg border-b-2 border-t-2 border-ink-rule my-1 relative z-30">
-      {/* Desktop Navigation Ribbon */}
-      <div className="hidden md:flex items-center justify-between px-2">
-        <div className="flex items-center justify-center flex-1">
+    <>
+      {/* Desktop Navigation Ribbon (sm+) */}
+      <nav className="hidden sm:flex w-full bg-paper-bg my-1 relative z-30 border-b-2 border-t-2 border-ink-rule">
+        <div className="flex items-center justify-center flex-1 px-2">
           {NAV_ITEMS.map((item) => {
             const isActive =
               item.href === "/"
@@ -44,7 +79,7 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`px-3 lg:px-4 py-2 text-xs lg:text-[13px] font-headline font-bold uppercase tracking-[0.14em] transition-all flex items-center justify-center ${
+                className={`px-3 lg:px-4 py-2 text-xs lg:text-nav font-headline font-bold uppercase tracking-[0.14em] transition-all flex items-center justify-center ${
                   isActive
                     ? "bg-ink-primary text-paper-bg"
                     : "text-ink-primary hover:bg-ink-primary/10 hover:text-ink-black"
@@ -55,76 +90,76 @@ export default function Navigation() {
             );
           })}
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Bar */}
-      <div className="md:hidden flex items-center justify-between px-3 py-2">
-        <span className="font-headline font-black text-sm uppercase tracking-wider text-ink-primary">
-          NAVIGATION
-        </span>
-
+      {/* Mobile Pages Navigation (<sm) */}
+      <div
+        ref={mobileNavRef}
+        className="sm:hidden w-full bg-paper-bg my-1 relative z-30 border-b-2 border-t-2 border-ink-rule"
+      >
+        {/* Toggle Bar */}
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
           aria-expanded={isOpen}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-          className="p-2 border border-ink-rule bg-paper-card active:bg-ink-primary active:text-paper-card hover:bg-ink-primary hover:text-paper-card transition-colors cursor-pointer touch-manipulation flex items-center justify-center select-none"
+          aria-label={isOpen ? "Collapse pages menu" : "Expand pages menu"}
+          className="w-full flex items-center justify-between px-3 py-2 text-xs font-headline font-bold uppercase tracking-[0.14em] text-ink-primary bg-paper-bg hover:bg-ink-primary/5 transition-colors cursor-pointer select-none touch-manipulation"
         >
-          {isOpen ? (
-            <svg
-              className="w-5 h-5 pointer-events-none stroke-current"
-              viewBox="0 0 24 24"
-              fill="none"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          ) : (
-            <svg
-              className="w-5 h-5 pointer-events-none stroke-current"
-              viewBox="0 0 24 24"
-              fill="none"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          )}
+          <div className="flex items-center space-x-2">
+            <span className="font-black">PAGES</span>
+            {activeItem && (
+              <span className="text-2xs font-mono text-ink-muted border-l border-ink-rule/30 pl-2">
+                {activeItem.name}
+              </span>
+            )}
+          </div>
+
+          <span
+            className={`inline-block text-[10px] text-ink-primary transition-transform duration-200 ease-out transform ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+            aria-hidden="true"
+          >
+            ▼
+          </span>
         </button>
-      </div>
 
-      {/* Mobile Drawer Menu */}
-      {isOpen && (
-        <div className="md:hidden border-t border-ink-rule bg-paper-bg divide-y divide-ink-rule/20">
-          {NAV_ITEMS.map((item) => {
-            const isActive =
-              item.href === "/"
-                ? pathname === "/"
-                : pathname.startsWith(item.href);
+        {/* Smoothly Collapsible Mobile Page Items */}
+        <div
+          className={`grid transition-all duration-300 ease-in-out ${
+            isOpen
+              ? "grid-rows-[1fr] opacity-100 border-t border-ink-rule"
+              : "grid-rows-[0fr] opacity-0 pointer-events-none"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <nav className="divide-y divide-ink-rule/15 bg-paper-white">
+              {NAV_ITEMS.map((item) => {
+                const isActive =
+                  item.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(item.href);
 
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsOpen(false)}
-                className={`flex items-center justify-between px-4 py-3 text-xs font-headline font-bold uppercase tracking-wider touch-manipulation ${
-                  isActive
-                    ? "bg-ink-primary text-paper-bg"
-                    : "text-ink-primary active:bg-ink-primary/20 hover:bg-ink-primary/10"
-                }`}
-              >
-                <span>{item.name}</span>
-              </Link>
-            );
-          })}
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center justify-between px-4 py-2.5 text-xs font-headline font-bold uppercase tracking-wider touch-manipulation transition-colors ${
+                      isActive
+                        ? "bg-ink-primary text-paper-bg"
+                        : "text-ink-primary active:bg-ink-primary/20 hover:bg-ink-primary/10"
+                    }`}
+                  >
+                    <span>{item.name}</span>
+                    {isActive && <span className="text-xs-compact">●</span>}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
         </div>
-      )}
-    </nav>
+      </div>
+    </>
   );
 }

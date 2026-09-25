@@ -42,7 +42,7 @@ export default function Article({
       {/* Kicker Header */}
       {kicker && (
         <div className="flex items-center space-x-2">
-          <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+          <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
             {kicker}
           </span>
           <span className="h-px flex-1 bg-ink-rule"></span>
@@ -87,7 +87,7 @@ export default function Article({
           {/* Tag Badges */}
           {tags && tags.length > 0 && (
             <div className="pt-3 border-t border-dashed border-ink-rule/30">
-              <div className="text-[10px] font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1.5">
+              <div className="text-xs-compact font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1.5">
                 TOPICS &amp; TECHNOLOGIES:
               </div>
               <div className="flex flex-wrap gap-1.5">

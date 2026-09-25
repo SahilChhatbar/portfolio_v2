@@ -51,7 +51,7 @@ export default function CareerPage() {
         {/* Left Column (Span 7): Chronological Milestone Dispatches */}
         <div className="lg:col-span-7 lg:pr-6 space-y-6">
           <div className="flex items-center space-x-2">
-            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
               {timelineWireTag}
             </span>
             <span className="h-px flex-1 bg-ink-rule"></span>
@@ -83,7 +83,7 @@ export default function CareerPage() {
 
           {/* Current Professional Appointment Summary */}
           <div className="p-3 border border-ink-rule bg-paper-card space-y-1.5">
-            <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-0.5">
+            <div className="font-sans text-xs-compact font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-0.5">
               {currentStation.title}
             </div>
             <h4 className="font-headline font-bold text-sm uppercase text-ink-primary">
@@ -98,7 +98,7 @@ export default function CareerPage() {
         {/* Right Column (Span 5): Academic Chronicle & Credentials */}
         <div className="lg:col-span-5 lg:pl-6 pt-6 lg:pt-0 space-y-6">
           <div className="flex items-center space-x-2">
-            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
               {pedigreeTag}
             </span>
             <span className="h-px flex-1 bg-ink-rule"></span>
@@ -111,11 +111,11 @@ export default function CareerPage() {
                 className="p-3.5 border border-ink-rule bg-paper-white space-y-2"
               >
                 <div className="flex items-center justify-between border-b border-ink-rule/30 pb-1">
-                  <span className="font-mono text-[11px] font-bold text-ink-primary">
+                  <span className="font-mono text-fine font-bold text-ink-primary">
                     {edu.year}
                   </span>
                   {edu.score && (
-                    <span className="text-[10px] font-sans font-bold uppercase bg-ink-primary text-paper-card px-1.5 py-0.5">
+                    <span className="text-xs-compact font-sans font-bold uppercase bg-ink-primary text-paper-card px-1.5 py-0.5">
                       {edu.score}
                     </span>
                   )}

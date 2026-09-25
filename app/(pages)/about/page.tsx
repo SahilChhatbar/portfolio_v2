@@ -43,7 +43,7 @@ export default function AboutPage() {
         <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-between">
           <div>
             {/* Kicker */}
-            <div className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-ink-primary border-b border-ink-rule pb-0.5 inline-block mb-1">
+            <div className="text-xs-compact font-sans font-bold uppercase tracking-[0.2em] text-ink-primary border-b border-ink-rule pb-0.5 inline-block mb-1">
               {article.kicker}
             </div>
 
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
           {/* Side Bio Card */}
           <div className="w-full mt-3 p-3 border border-ink-rule bg-paper-card space-y-1.5 text-xs font-serif">
-            <div className="font-sans font-bold text-[10px] uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-0.5">
+            <div className="font-sans font-bold text-xs-compact uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-0.5">
               {dossier.title}
             </div>
             {dossier.items.map((item, index) => (
@@ -166,7 +166,7 @@ export default function AboutPage() {
         <div className="pt-3 md:pt-0 md:pl-4 space-y-2">
           <Card title={offDuty.title} badge={offDuty.badge} variant="boxed">
             <p className="newspaper-columns">{offDuty.description}</p>
-            <div className="mt-2 text-[10px] font-mono text-neutral-600">
+            <div className="mt-2 text-xs-compact font-mono text-neutral-600">
               {offDuty.status}
             </div>
           </Card>

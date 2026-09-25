@@ -52,7 +52,7 @@ export default function ContactPage() {
         {/* Left Column (Span 7): Official Classified Direct Wire Channels */}
         <div className="lg:col-span-7 lg:pr-6 space-y-4">
           <div className="flex items-center space-x-2">
-            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
               {directoryTag}
             </span>
             <span className="h-px flex-1 bg-ink-rule"></span>
@@ -111,7 +111,7 @@ export default function ContactPage() {
         {/* Right Column (Span 5): Availability & Details */}
         <div className="lg:col-span-5 lg:pl-6 pt-6 lg:pt-0 space-y-6">
           <div className="flex items-center space-x-2">
-            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
               {telemetryTag}
             </span>
             <span className="h-px flex-1 bg-ink-rule"></span>
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
           {/* Availability Details Box */}
           <div className="p-4 border-2 border-ink-rule bg-paper-white space-y-3">
-            <div className="font-sans text-[10px] font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-1">
+            <div className="font-sans text-xs-compact font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-1">
               AVAILABILITY &amp; LOCATION DETAILS
             </div>
 
@@ -153,7 +153,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="pt-2 border-t border-ink-rule text-[11px] font-sans font-semibold text-ink-dark">
+            <div className="pt-2 border-t border-ink-rule text-fine font-sans font-semibold text-ink-dark">
               {telemetry.status}
             </div>
           </div>

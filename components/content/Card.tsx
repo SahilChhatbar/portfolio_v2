@@ -29,7 +29,7 @@ export default function Card({
     return (
       <div className={`p-4 bg-ink-black text-paper-bg border-2 border-ink-rule ${className}`}>
         {badge && (
-          <span className="bg-paper-bg text-ink-primary px-1.5 py-0.5 text-[9px] font-sans font-bold uppercase tracking-widest inline-block mb-2">
+          <span className="bg-paper-bg text-ink-primary px-1.5 py-0.5 text-2xs font-sans font-bold uppercase tracking-widest inline-block mb-2">
             {badge}
           </span>
         )}
@@ -84,7 +84,7 @@ export default function Card({
           </h4>
         )}
         {badge && (
-          <span className="bg-ink-primary text-paper-card px-1.5 py-0.5 text-[9px] font-sans font-bold uppercase tracking-widest">
+          <span className="bg-ink-primary text-paper-card px-1.5 py-0.5 text-2xs font-sans font-bold uppercase tracking-widest">
             {badge}
           </span>
         )}

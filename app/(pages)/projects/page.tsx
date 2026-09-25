@@ -59,7 +59,7 @@ export default function ProjectsPage() {
         {radioVerse && (
           <div className="lg:col-span-6 lg:pr-6 space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+              <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
                 {radioVerse.wireTag || "PROJECT 02 • AUDIO STREAMING"}
               </span>
               <span className="h-px flex-1 bg-ink-rule"></span>
@@ -90,7 +90,7 @@ export default function ProjectsPage() {
             </div>
 
             <div className="pt-2 border-t border-dashed border-ink-rule/30">
-              <div className="text-[10px] font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1">
+              <div className="text-xs-compact font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1">
                 TECH STACK:
               </div>
               <div className="flex flex-wrap gap-1">
@@ -124,7 +124,7 @@ export default function ProjectsPage() {
         {cineScope && (
           <div className="lg:col-span-6 lg:pl-6 pt-6 lg:pt-0 space-y-4">
             <div className="flex items-center space-x-2">
-              <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-widest">
+              <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
                 {cineScope.wireTag || "PROJECT 03 • MEDIA DISCOVERY"}
               </span>
               <span className="h-px flex-1 bg-ink-rule"></span>
@@ -155,7 +155,7 @@ export default function ProjectsPage() {
             </div>
 
             <div className="pt-2 border-t border-dashed border-ink-rule/30">
-              <div className="text-[10px] font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1">
+              <div className="text-xs-compact font-sans uppercase font-bold tracking-wider text-ink-subtle mb-1">
                 TECH STACK:
               </div>
               <div className="flex flex-wrap gap-1">
@@ -191,7 +191,7 @@ export default function ProjectsPage() {
       {/* Bottom Editorial Classifieds Box */}
       <div className="p-4 bg-paper-card border-2 border-ink-rule grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="md:col-span-2 space-y-1">
-          <div className="font-sans font-bold text-[10px] uppercase tracking-wider text-ink-primary">
+          <div className="font-sans font-bold text-xs-compact uppercase tracking-wider text-ink-primary">
             {classifieds.kicker}
           </div>
           <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
