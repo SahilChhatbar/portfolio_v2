@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 import { ABOUT_DATA } from "./data/about";
 
 export const metadata: Metadata = {
-  title: "About Me | Sahil K. Chhatbar",
+  title: "Sahil K. Chhatbar",
   description:
     "Biography and profile of Sahil K. Chhatbar — Full-Stack Software Engineer & Builder.",
 };
