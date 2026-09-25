@@ -37,10 +37,10 @@ export default function AboutPage() {
       prevHref={meta.prevHref}
       nextHref={meta.nextHref}
     >
-      {/* Top Main Article: Text on Left + Profile Image on Right */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 pb-6">
-        {/* Left Column (Span 7 / 8): Biography & Editorial */}
-        <div className="lg:col-span-7 xl:col-span-8 flex flex-col justify-between">
+      {/* Top Main Article: Text on Left (65%) + Profile Image on Right (35%) on md (768px+) */}
+      <div className="flex flex-col md:flex-row gap-6 pb-6">
+        {/* Left Column (65%): Biography & Editorial */}
+        <div className="w-full md:w-[65%] flex flex-col justify-between">
           <div>
             {/* Kicker */}
             <div className="text-xs-compact font-sans font-bold uppercase tracking-[0.2em] text-ink-primary border-b border-ink-rule pb-0.5 inline-block mb-1">
@@ -96,8 +96,8 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Right Column (Span 5 / 4): Profile Photo Frame */}
-        <div className="lg:col-span-5 xl:col-span-4 flex flex-col items-center">
+        {/* Right Column (35%): Profile Photo Frame & Dossier */}
+        <div className="w-full md:w-[35%] shrink-0 flex flex-col items-center">
           <ImageFrame
             src={profileImage.src}
             alt={profileImage.alt}
