@@ -33,9 +33,6 @@ export default function ProjectsPage() {
             kicker={fitRep.kicker || "FEATURED PROJECT • FULL-STACK APP"}
             headline={fitRep.leadHeadline}
             subheadline={fitRep.subtitle}
-            byline="SAHIL K. CHHATBAR"
-            dateline="AHMEDABAD"
-            date={fitRep.date}
             paragraphs={[fitRep.description, ...fitRep.fullStory]}
             imageSrc={fitRep.image}
             imageAlt={fitRep.imageAlt}

@@ -51,11 +51,12 @@ export const metadata: Metadata = {
     "Sahil K. Chhatbar",
     "Sahil Chhatbar",
     "Software Developer",
+    "Engineer",
     "Full-Stack Engineer",
     "Next.js Portfolio",
     "React Developer",
     "TypeScript",
-    "Frontend Architect",
+    "Frontend Developer",
     "Lamda Logs",
   ],
   authors: [
@@ -96,9 +97,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${playfair.variable} ${newsreader.variable} ${cinzel.variable} ${geistMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-paper-bg text-ink-black selection:bg-ink-primary selection:text-paper-bg">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col bg-paper-bg text-ink-black selection:bg-ink-primary selection:text-paper-bg"
+      >
         {/* Outer Broadsheet Paper Container */}
         <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 flex-1 flex flex-col">
           {/* Header Area */}

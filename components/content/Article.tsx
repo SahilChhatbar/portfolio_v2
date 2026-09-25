@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import DropCap from "@/components/ui/DropCap";
-import ArticleMeta from "./ArticleMeta";
 import ImageFrame from "./ImageFrame";
 import Icon from "@/components/icons/Icon";
 import { ICONS } from "@/constants/icons";
@@ -10,12 +9,10 @@ interface ArticleProps {
   kicker?: string;
   headline: string;
   subheadline?: string;
-  byline?: string;
-  dateline?: string;
-  date?: string;
   paragraphs: string[];
   imageSrc?: string;
   imageAlt?: string;
+  imageObjectFit?: "cover" | "contain";
   tags?: string[];
   primaryLink?: { text: string; href: string; external?: boolean };
   secondaryLink?: { text: string; href: string; external?: boolean };
@@ -26,12 +23,10 @@ export default function Article({
   kicker,
   headline,
   subheadline,
-  byline = "SAHIL K. CHHATBAR",
-  dateline = "AHMEDABAD",
-  date,
   paragraphs,
   imageSrc,
   imageAlt,
+  imageObjectFit = "contain",
   tags,
   primaryLink,
   secondaryLink,
@@ -66,15 +61,12 @@ export default function Article({
         </h3>
       )}
 
-      {/* Byline / Metadata */}
-      <ArticleMeta byline={byline} dateline={dateline} date={date} />
-
-      {/* Article Grid: Text & Media */}
+      {/* Article Grid: Text & Media (50% / 50% split) */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
-        {/* Main Text Body */}
+        {/* Main Text Body (50%) */}
         <div
           className={`${
-            imageSrc ? "md:col-span-7 lg:col-span-8" : "md:col-span-12"
+            imageSrc ? "md:col-span-6" : "md:col-span-12"
           } space-y-3 font-serif text-sm sm:text-base leading-relaxed text-ink-dark`}
         >
           {/* Lead paragraph with DropCap */}
@@ -159,13 +151,14 @@ export default function Article({
           )}
         </div>
 
-        {/* Side / Hero Media Photo Frame */}
+        {/* Side / Hero Media Photo Frame (50%) */}
         {imageSrc && (
-          <div className="md:col-span-5 lg:col-span-4">
+          <div className="md:col-span-6">
             <ImageFrame
               src={imageSrc}
               alt={imageAlt || headline}
               aspectRatio="landscape"
+              objectFit={imageObjectFit}
             />
           </div>
         )}

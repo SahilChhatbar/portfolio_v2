@@ -5,6 +5,7 @@ interface ImageFrameProps {
   alt: string;
   priority?: boolean;
   aspectRatio?: "portrait" | "landscape" | "square" | "wide";
+  objectFit?: "cover" | "contain";
   className?: string;
 }
 
@@ -13,6 +14,7 @@ export default function ImageFrame({
   alt,
   priority = false,
   aspectRatio = "portrait",
+  objectFit = "contain",
   className = "",
 }: ImageFrameProps) {
   const aspectClasses = {
@@ -27,7 +29,7 @@ export default function ImageFrame({
       {/* Frame Container */}
       <div className="p-1 border-2 border-ink-rule bg-paper-white shadow-2xs inline-block w-full">
         <div
-          className={`relative w-full overflow-hidden border border-ink-rule/30 ${aspectClasses[aspectRatio]} bg-neutral-200`}
+          className={`relative w-full overflow-hidden border border-ink-rule/30 ${aspectClasses[aspectRatio]} bg-paper-card flex items-center justify-center`}
         >
           <Image
             src={src}
@@ -35,7 +37,7 @@ export default function ImageFrame({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={priority}
-            className="object-cover grayscale contrast-110 hover:grayscale-0 transition-all duration-300"
+            className={objectFit === "cover" ? "object-cover" : "object-contain"}
           />
         </div>
       </div>

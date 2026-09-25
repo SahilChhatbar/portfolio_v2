@@ -1,4 +1,3 @@
-import ArticleMeta from "@/components/content/ArticleMeta";
 import Card from "@/components/content/Card";
 import ImageFrame from "@/components/content/ImageFrame";
 import PageContainer from "@/components/layout/PageContainer";
@@ -58,13 +57,6 @@ export default function AboutPage() {
               {article.subheadline}
             </h4>
 
-            {/* Byline / Dateline */}
-            <ArticleMeta
-              byline={article.byline}
-              dateline={article.dateline}
-              date={article.date}
-            />
-
             {/* Biography Lead with DropCap */}
             <div className="mt-3 space-y-3 font-serif text-sm sm:text-base leading-relaxed text-ink-dark">
               <p className="newspaper-columns">
@@ -111,6 +103,7 @@ export default function AboutPage() {
             alt={profileImage.alt}
             aspectRatio={profileImage.aspectRatio}
             priority={profileImage.priority}
+            objectFit="cover"
           />
 
           {/* Side Bio Card */}

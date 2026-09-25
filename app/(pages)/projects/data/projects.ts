@@ -93,8 +93,7 @@ export const PROJECTS_DATA: ProjectsData = {
       date: "AUDIO PLATFORM",
       edition: "WEB APPLICATION",
       wireTag: "PROJECT 02 • AUDIO STREAMING",
-      leadHeadline:
-        "RADIOVERSE: GLOBAL STREAMING FOR 30,000+ LIVE RADIO STATIONS",
+      leadHeadline: "RADIOVERSE: GLOBAL STREAMING FOR LIVE RADIO STATIONS",
       description:
         "An interactive global radio streaming application connecting listeners to thousands of live stations across continents with low latency buffering, genre filtering, and 3D globe navigation.",
       fullStory: [

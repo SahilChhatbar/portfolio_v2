@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface NavItem {
   name: string;
@@ -23,47 +23,16 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [prevPathname, setPrevPathname] = useState(pathname);
 
-  // Reset open state when pathname changes during render
+  // Reset menu open state on route change
   if (prevPathname !== pathname) {
     setPrevPathname(pathname);
     setIsOpen(false);
   }
 
-  useEffect(() => {
-    const handleToggle = (e: Event) => {
-      const customEvent = e as CustomEvent<{ open: boolean }>;
-      if (customEvent.detail && typeof customEvent.detail.open === "boolean") {
-        setIsOpen(customEvent.detail.open);
-      } else {
-        setIsOpen((prev) => {
-          const next = !prev;
-          if (typeof window !== "undefined") {
-            window.dispatchEvent(
-              new CustomEvent("mobile-nav-change", { detail: { open: next } })
-            );
-          }
-          return next;
-        });
-      }
-    };
-
-    window.addEventListener("toggle-mobile-nav", handleToggle);
-    return () => window.removeEventListener("toggle-mobile-nav", handleToggle);
-  }, []);
-
-  const closeMenu = () => {
-    setIsOpen(false);
-    if (typeof window !== "undefined") {
-      window.dispatchEvent(
-        new CustomEvent("mobile-nav-change", { detail: { open: false } })
-      );
-    }
-  };
-
   return (
-    <nav className="w-full bg-paper-bg my-1 relative z-30">
-      {/* Desktop Navigation Ribbon (sm+) */}
-      <div className="hidden sm:flex items-center justify-between px-2 border-b-2 border-t-2 border-ink-rule">
+    <nav className="w-full bg-paper-bg border-b-2 border-t-2 border-ink-rule my-1 relative z-30">
+      {/* Desktop Navigation Ribbon */}
+      <div className="hidden md:flex items-center justify-between px-2">
         <div className="flex items-center justify-center flex-1">
           {NAV_ITEMS.map((item) => {
             const isActive =
@@ -88,9 +57,51 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu (<sm) */}
+      {/* Mobile Bar */}
+      <div className="md:hidden flex items-center justify-between px-3 py-2">
+        <span className="font-headline font-black text-sm uppercase tracking-wider text-ink-primary">
+          NAVIGATION
+        </span>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
+          className="p-2 border border-ink-rule bg-paper-card active:bg-ink-primary active:text-paper-card hover:bg-ink-primary hover:text-paper-card transition-colors cursor-pointer touch-manipulation flex items-center justify-center select-none"
+        >
+          {isOpen ? (
+            <svg
+              className="w-5 h-5 pointer-events-none stroke-current"
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <svg
+              className="w-5 h-5 pointer-events-none stroke-current"
+              viewBox="0 0 24 24"
+              fill="none"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Drawer Menu */}
       {isOpen && (
-        <div className="sm:hidden border-b-2 border-ink-rule bg-paper-bg divide-y divide-ink-rule/20">
+        <div className="md:hidden border-t border-ink-rule bg-paper-bg divide-y divide-ink-rule/20">
           {NAV_ITEMS.map((item) => {
             const isActive =
               item.href === "/"
@@ -101,11 +112,11 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                onClick={closeMenu}
-                className={`flex items-center justify-between px-4 py-2.5 text-xs font-headline font-bold uppercase tracking-wider ${
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center justify-between px-4 py-3 text-xs font-headline font-bold uppercase tracking-wider touch-manipulation ${
                   isActive
                     ? "bg-ink-primary text-paper-bg"
-                    : "text-ink-primary hover:bg-ink-primary/10"
+                    : "text-ink-primary active:bg-ink-primary/20 hover:bg-ink-primary/10"
                 }`}
               >
                 <span>{item.name}</span>

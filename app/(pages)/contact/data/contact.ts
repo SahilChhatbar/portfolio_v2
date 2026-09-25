@@ -58,7 +58,7 @@ export const CONTACT_DATA: ContactData = {
     subtitle:
       "Direct contact channels, availability details, and resume download.",
     prevHref: "/career",
-    nextHref: "/",
+    nextHref: "",
   },
   banner: {
     openWireTag: "GET IN TOUCH",

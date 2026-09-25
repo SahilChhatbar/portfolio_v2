@@ -31,9 +31,6 @@ export interface AboutData {
     kicker: string;
     headline: string;
     subheadline: string;
-    byline: string;
-    dateline: string;
-    date: string;
     bioParagraphs: string[];
     quote: string;
     actions: {
@@ -75,7 +72,7 @@ export const ABOUT_DATA: AboutData = {
     category: "SECTION I • BIOGRAPHY & BACKGROUND",
     subtitle:
       "A deep dive into my background, technical philosophy, and engineering approach.",
-    prevHref: "/contact",
+    prevHref: "",
     nextHref: "/experience",
   },
   article: {
@@ -83,9 +80,6 @@ export const ABOUT_DATA: AboutData = {
     headline: "SAHIL CHHATBAR: FULL-STACK SOFTWARE ENGINEER",
     subheadline:
       "Building scalable, high-performance web applications and systems.",
-    byline: "SAHIL CHHATBAR",
-    dateline: "AHMEDABAD, GUJARAT, INDIA",
-    date: "Tuesday, 7th Oct 2003",
     bioParagraphs: [
       "From writing clean server-rendered architectures to orchestrating high-throughput backend APIs and AI-assisted workflows, Sahil brings engineering rigor to every codebase. He bridges the gap between deep technical foundations and intuitive user interfaces.",
       "Currently building enterprise-grade applications at Lamda Logs, Sahil has engineered scalable full-stack features, optimized database indexing pipelines, and spearheaded modern frontend refactors using React, Next.js, and TypeScript.",
@@ -100,7 +94,7 @@ export const ABOUT_DATA: AboutData = {
     },
   },
   profileImage: {
-    src: "/images/profile/profile-placeholder.jpg",
+    src: "/images/profile/me.jpg",
     alt: "Sahil K. Chhatbar",
     caption: "Sahil K. Chhatbar — Software Engineer & Builder.",
     credit: "PORTFOLIO ARCHIVE / SAHIL CHHATBAR",
