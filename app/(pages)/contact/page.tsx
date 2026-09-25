@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import NewspaperPage from "@/components/newspaper/NewspaperPage";
-import ClassifiedBox from "@/components/newspaper/ClassifiedBox";
+import PageContainer from "@/components/layout/PageContainer";
+import Card from "@/components/content/Card";
 import Icon from "@/components/icons/Icon";
 import { ICONS } from "@/constants/icons";
 import { CONTACT_DATA } from "./data/contact";
@@ -24,7 +24,7 @@ export default function ContactPage() {
   } = CONTACT_DATA;
 
   return (
-    <NewspaperPage
+    <PageContainer
       pageNumber={meta.pageNumber}
       totalPages={meta.totalPages}
       pageTitle={meta.pageTitle}
@@ -159,7 +159,7 @@ export default function ContactPage() {
           </div>
 
           {/* Resume Quick Dispatch */}
-          <ClassifiedBox
+          <Card
             title={cvBox.title}
             badge={cvBox.badge}
             action={{
@@ -170,9 +170,9 @@ export default function ContactPage() {
             }}
           >
             {cvBox.description}
-          </ClassifiedBox>
+          </Card>
         </div>
       </div>
-    </NewspaperPage>
+    </PageContainer>
   );
 }

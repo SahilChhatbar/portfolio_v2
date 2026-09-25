@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import NewspaperPage from "@/components/newspaper/NewspaperPage";
-import Divider from "@/components/newspaper/Divider";
-import ClassifiedBox from "@/components/newspaper/ClassifiedBox";
+import PageContainer from "@/components/layout/PageContainer";
+import Card from "@/components/content/Card";
+import Divider from "@/components/ui/Divider";
 import { EXPERIENCE_DATA } from "./data/experience";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function ExperiencePage() {
   const internRole = roles[1];
 
   return (
-    <NewspaperPage
+    <PageContainer
       pageNumber={meta.pageNumber}
       totalPages={meta.totalPages}
       pageTitle={meta.pageTitle}
@@ -201,7 +201,7 @@ export default function ExperiencePage() {
           </div>
 
           {/* Classifieds Box */}
-          <ClassifiedBox
+          <Card
             title={recommendations.title}
             badge={recommendations.badge}
             action={{
@@ -211,9 +211,9 @@ export default function ExperiencePage() {
             }}
           >
             {recommendations.text}
-          </ClassifiedBox>
+          </Card>
         </div>
       </div>
-    </NewspaperPage>
+    </PageContainer>
   );
 }

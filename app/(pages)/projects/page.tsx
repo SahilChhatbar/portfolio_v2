@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import NewspaperPage from "@/components/newspaper/NewspaperPage";
-import LeadArticle from "@/components/newspaper/LeadArticle";
-import NewspaperImage from "@/components/newspaper/NewspaperImage";
-import Divider from "@/components/newspaper/Divider";
-import ClassifiedBox from "@/components/newspaper/ClassifiedBox";
+import PageContainer from "@/components/layout/PageContainer";
+import Article from "@/components/content/Article";
+import ImageFrame from "@/components/content/ImageFrame";
+import Card from "@/components/content/Card";
+import Divider from "@/components/ui/Divider";
 import { PROJECTS_DATA } from "./data/projects";
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
   const [fitRep, radioVerse, cineScope] = projects;
 
   return (
-    <NewspaperPage
+    <PageContainer
       pageNumber={meta.pageNumber}
       totalPages={meta.totalPages}
       pageTitle={meta.pageTitle}
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
       {/* Featured Project 1: FitRep (Full Broadsheet Lead) */}
       {fitRep && (
         <div className="pb-6">
-          <LeadArticle
+          <Article
             kicker={fitRep.kicker || "FEATURED PROJECT • FULL-STACK APP"}
             headline={fitRep.leadHeadline}
             subheadline={fitRep.subtitle}
@@ -39,7 +39,6 @@ export default function ProjectsPage() {
             paragraphs={[fitRep.description, ...fitRep.fullStory]}
             imageSrc={fitRep.image}
             imageAlt={fitRep.imageAlt}
-            imageCaption={fitRep.caption}
             tags={fitRep.tags}
             primaryLink={{
               text: "VIEW ON GITHUB",
@@ -78,10 +77,9 @@ export default function ProjectsPage() {
             </h4>
 
             {/* PNG Image */}
-            <NewspaperImage
+            <ImageFrame
               src={radioVerse.image}
               alt={radioVerse.imageAlt}
-              caption={radioVerse.caption}
               aspectRatio="landscape"
             />
 
@@ -144,10 +142,9 @@ export default function ProjectsPage() {
             </h4>
 
             {/* PNG Image */}
-            <NewspaperImage
+            <ImageFrame
               src={cineScope.image}
               alt={cineScope.imageAlt}
-              caption={cineScope.caption}
               aspectRatio="landscape"
             />
 
@@ -209,7 +206,7 @@ export default function ProjectsPage() {
         </div>
 
         <div className="md:col-span-1 border-t md:border-t-0 md:border-l border-ink-rule/30 pt-3 md:pt-0 md:pl-4 flex flex-col justify-center">
-          <ClassifiedBox
+          <Card
             title={classifieds.boxTitle}
             badge={classifieds.badge}
             action={{
@@ -219,9 +216,9 @@ export default function ProjectsPage() {
             }}
           >
             {classifieds.text}
-          </ClassifiedBox>
+          </Card>
         </div>
       </div>
-    </NewspaperPage>
+    </PageContainer>
   );
 }

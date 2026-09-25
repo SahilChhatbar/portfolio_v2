@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import NewspaperPage from "@/components/newspaper/NewspaperPage";
-import Divider from "@/components/newspaper/Divider";
+import PageContainer from "@/components/layout/PageContainer";
+import Divider from "@/components/ui/Divider";
 import Icon from "@/components/icons/Icon";
 import { SKILLS_DATA } from "./data/skills";
 
@@ -14,7 +14,7 @@ export default function SkillsPage() {
   const { meta, intro, categories, takeaway } = SKILLS_DATA;
 
   return (
-    <NewspaperPage
+    <PageContainer
       pageNumber={meta.pageNumber}
       totalPages={meta.totalPages}
       pageTitle={meta.pageTitle}
@@ -127,6 +127,6 @@ export default function SkillsPage() {
           </div>
         </div>
       </div>
-    </NewspaperPage>
+    </PageContainer>
   );
 }

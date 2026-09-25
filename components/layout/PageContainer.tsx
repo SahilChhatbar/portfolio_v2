@@ -1,7 +1,7 @@
 import React from "react";
-import PageNumber from "./PageNumber";
+import Pagination from "./Pagination";
 
-interface NewspaperPageProps {
+interface PageContainerProps {
   pageNumber: number;
   totalPages?: number;
   pageTitle?: string;
@@ -13,7 +13,7 @@ interface NewspaperPageProps {
   className?: string;
 }
 
-export default function NewspaperPage({
+export default function PageContainer({
   pageNumber,
   totalPages = 6,
   pageTitle = "",
@@ -21,16 +21,16 @@ export default function NewspaperPage({
   nextHref,
   children,
   className = "",
-}: NewspaperPageProps) {
+}: PageContainerProps) {
   return (
     <div
       className={`w-full bg-paper-white border border-ink-rule p-3 sm:p-6 lg:p-8 shadow-xs ${className}`}
     >
-      {/* Main Editorial Content Directly */}
+      {/* Main Content */}
       <div className="w-full">{children}</div>
 
-      {/* Page Number & Navigation Footer */}
-      <PageNumber
+      {/* Pagination Footer */}
+      <Pagination
         current={pageNumber}
         total={totalPages}
         title={pageTitle}

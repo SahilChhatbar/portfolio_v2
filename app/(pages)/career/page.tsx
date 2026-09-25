@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import NewspaperPage from "@/components/newspaper/NewspaperPage";
-import Divider from "@/components/newspaper/Divider";
-import ClassifiedBox from "@/components/newspaper/ClassifiedBox";
+import PageContainer from "@/components/layout/PageContainer";
+import Card from "@/components/content/Card";
+import Divider from "@/components/ui/Divider";
 import { CAREER_DATA } from "./data/career";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function CareerPage() {
   } = CAREER_DATA;
 
   return (
-    <NewspaperPage
+    <PageContainer
       pageNumber={meta.pageNumber}
       totalPages={meta.totalPages}
       pageTitle={meta.pageTitle}
@@ -142,15 +142,15 @@ export default function CareerPage() {
           </div>
 
           {/* Academic Philosophy Notice */}
-          <ClassifiedBox
+          <Card
             title={rigorNotice.title}
             badge={rigorNotice.badge}
             variant="boxed"
           >
             <p className="newspaper-columns">{rigorNotice.description}</p>
-          </ClassifiedBox>
+          </Card>
         </div>
       </div>
-    </NewspaperPage>
+    </PageContainer>
   );
 }

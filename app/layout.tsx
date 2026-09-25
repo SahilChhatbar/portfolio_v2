@@ -1,6 +1,5 @@
-import FooterSection from "@/components/newspaper/FooterSection";
-import Masthead from "@/components/newspaper/Masthead";
-import Navigation from "@/components/newspaper/Navigation";
+import Header from "@/components/layout/Header";
+import Navigation from "@/components/layout/Navigation";
 import type { Metadata, Viewport } from "next";
 import {
   Cinzel,
@@ -102,17 +101,14 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-paper-bg text-ink-black selection:bg-ink-primary selection:text-paper-bg">
         {/* Outer Broadsheet Paper Container */}
         <div className="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-3 sm:py-6 flex-1 flex flex-col">
-          {/* Masthead Header Area */}
-          <Masthead />
+          {/* Header Area */}
+          <Header />
 
-          {/* Fixed/Primary Navigation Ribbon */}
+          {/* Navigation Ribbon */}
           <Navigation />
 
           {/* Main Portfolio Content */}
           <main className="flex-1 w-full my-4">{children}</main>
-
-          {/* Editorial Broadsheet Footer */}
-          <FooterSection />
         </div>
       </body>
     </html>
