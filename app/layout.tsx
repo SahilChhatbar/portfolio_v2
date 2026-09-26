@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Navigation from "@/components/layout/Navigation";
 import { TransitionProvider } from "@/context/TransitionContext";
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import {
   Cinzel,
@@ -118,6 +119,7 @@ export default function RootLayout({
             <TransitionProvider>{children}</TransitionProvider>
           </main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
