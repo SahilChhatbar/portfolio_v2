@@ -36,6 +36,7 @@ export default function ProjectsPage() {
             paragraphs={[fitRep.description, ...fitRep.fullStory]}
             imageSrc={fitRep.image}
             imageAlt={fitRep.imageAlt}
+            imagePriority={fitRep.priority ?? true}
             tags={fitRep.tags}
             primaryLink={{
               text: "VIEW ON GITHUB",

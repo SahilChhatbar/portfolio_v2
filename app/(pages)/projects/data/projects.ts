@@ -16,6 +16,7 @@ export interface ProjectItem {
   liveUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  priority?: boolean;
 }
 
 export interface ProjectsData {
@@ -85,6 +86,7 @@ export const PROJECTS_DATA: ProjectsData = {
       liveUrl: "https://github.com/SahilChhatbar",
       githubUrl: "https://github.com/SahilChhatbar/FitRep",
       featured: true,
+      priority: true,
     },
     {
       id: "radioverse",

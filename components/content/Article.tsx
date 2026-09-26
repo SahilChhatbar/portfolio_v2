@@ -13,6 +13,7 @@ interface ArticleProps {
   imageSrc?: string;
   imageAlt?: string;
   imageObjectFit?: "cover" | "contain";
+  imagePriority?: boolean;
   tags?: string[];
   primaryLink?: { text: string; href: string; external?: boolean };
   secondaryLink?: { text: string; href: string; external?: boolean };
@@ -27,6 +28,7 @@ export default function Article({
   imageSrc,
   imageAlt,
   imageObjectFit = "contain",
+  imagePriority = false,
   tags,
   primaryLink,
   secondaryLink,
@@ -71,6 +73,7 @@ export default function Article({
               alt={imageAlt || headline}
               aspectRatio="landscape"
               objectFit={imageObjectFit}
+              priority={imagePriority}
             />
           </div>
         )}
