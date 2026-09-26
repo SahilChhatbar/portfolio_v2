@@ -1,5 +1,6 @@
 import Header from "@/components/layout/Header";
 import Navigation from "@/components/layout/Navigation";
+import { TransitionProvider } from "@/context/TransitionContext";
 import type { Metadata, Viewport } from "next";
 import {
   Cinzel,
@@ -113,7 +114,9 @@ export default function RootLayout({
           <Navigation />
 
           {/* Main Portfolio Content */}
-          <main className="flex-1 w-full my-4">{children}</main>
+          <main className="flex-1 w-full my-4">
+            <TransitionProvider>{children}</TransitionProvider>
+          </main>
         </div>
       </body>
     </html>
