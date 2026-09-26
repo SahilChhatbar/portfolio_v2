@@ -81,9 +81,9 @@ export const ABOUT_DATA: AboutData = {
     subheadline:
       "",
   bioParagraphs: [
-    "Sahil is a Software Developer focused on building responsive, maintainable, and user-friendly web applications, with a strong interest in frontend engineering, problem solving, and continuous learning. He works primarily with React.js, Next.js, TypeScript, JavaScript, and modern frontend technologies.",
-    "His professional experience spans internships and full-time roles, where he has worked on production web applications, complex forms, data-heavy interfaces, dashboards, reusable UI components, REST API integrations, state management, accessibility, performance optimization, and automated testing. He has also built personal full-stack projects across fitness, radio streaming, and movie discovery.",
-    "Sahil values curiosity, clarity, ownership, collaboration, and continuous learning. He enjoys breaking complex problems into manageable pieces and turning designs into practical interfaces. His workflow also incorporates AI-assisted development tools such as Claude Code, Codex, ChatGPT, and Antigravity."
+  "Sahil is a Software Developer focused on building responsive, maintainable web applications with React.js, Next.js, TypeScript, and modern frontend technologies. He enjoys problem solving, learning, and turning ideas into practical products.",
+  "His experience spans internships and full-time development, working on production applications, complex interfaces, APIs, state management, performance, accessibility, and testing. He has also built full-stack personal projects across fitness, radio streaming, and movie discovery.",
+  "An academically strong Computer Science graduate with a 9.04 CGPA, Sahil values curiosity, ownership, collaboration, clear thinking, and continuous improvement. He also embraces AI-assisted development to learn, build, and solve problems more effectively."
   ],
     quote: "Build with curiosity, solve with clarity, and keep creating beyond the screen.",
     actions: {
