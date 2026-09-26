@@ -42,7 +42,7 @@
   --font-title: var(--font-cinzel), "Times New Roman", serif;
   --font-mono: var(--font-mono), monospace;
 
-  /* Editorial Custom Text Sizes */
+  /* Custom Text Sizes */
   --text-3xs: 8px;
   --text-2xs: 9px;
   --text-xs-compact: 10px;
@@ -100,7 +100,7 @@ body {
   text-transform: uppercase;
 }
 
-/* Editorial Typography */
+/* Typography */
 .font-headline {
   font-family: var(--font-headline), Georgia, "Times New Roman", serif;
 }

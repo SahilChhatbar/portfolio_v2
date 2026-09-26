@@ -1,6 +1,6 @@
 "use client";
 
-import { type IconName } from "@/constants/tokens/icons";
+import { type IconName } from "@/constants/icons";
 import { Icon as IconifyIcon, type IconProps } from "@iconify/react";
 import { getBundledIcon } from "./icon-data";
 

@@ -77,26 +77,27 @@ export const ABOUT_DATA: AboutData = {
   },
   article: {
     kicker: "BIOGRAPHY & BACKGROUND",
-    headline: "SAHIL CHHATBAR: FULL-STACK SOFTWARE ENGINEER",
+    headline: "SAHIL CHHATBAR: SOFTWARE DEVELOPER",
     subheadline:
-      "Building scalable, high-performance web applications and systems.",
+      "Specializing in React.js, Next.js, TypeScript, and modern web application development.",
     bioParagraphs: [
-      "From writing clean server-rendered architectures to orchestrating high-throughput backend APIs and AI-assisted workflows, Sahil brings engineering rigor to every codebase. He bridges the gap between deep technical foundations and intuitive user interfaces.",
-      "Currently building enterprise-grade applications at Lamda Logs, Sahil has engineered scalable full-stack features, optimized database indexing pipelines, and spearheaded modern frontend refactors using React, Next.js, and TypeScript.",
-      "When not shipping production releases, he conducts deep-dive technical explorations across browser rendering pipelines, micro-frontends, distributed state, and agentic workflows.",
+      "Sahil is a Software Developer focused on building responsive, maintainable, and user-friendly web applications, with a strong interest in frontend engineering, problem solving, and continuous learning.",
+      "He works primarily across modern frontend and full-stack web technologies, with professional experience building production applications using React.js, Next.js, TypeScript, JavaScript, Redux, Redux Toolkit, Zustand, TanStack Query, Tailwind CSS, Material UI, and REST APIs.",
+      "At Lamda Logs, Sahil has contributed across enterprise products including Flipspaces, ProView (OpenDots), and Lamda Flow. His work spans complex forms, data-heavy interfaces, analytics dashboards, reusable UI components, API integrations, application state management, accessibility improvements, performance optimization, and automated testing.",
+      "He enjoys understanding how things work, breaking complex problems into manageable pieces, and turning designs into practical interfaces. His development workflow also incorporates AI agents such as Claude Code, Codex, ChatGPT, and Antigravity."
     ],
-    quote: "Clean architectures outlive hype cycles.",
+    quote: "Build with curiosity, solve with clarity, and keep creating beyond the screen.",
     actions: {
       emailText: "SEND EMAIL",
-      emailUrl: "mailto:sahilchhatbar003@gmail.com",
+      emailUrl: "mailto:sahilchhatbar7@gmail.com",
       linkedinText: "LINKEDIN PROFILE",
-      linkedinUrl: "https://linkedin.com/in/sahil-chhatbar",
+      linkedinUrl: "https://www.linkedin.com/in/sahil-chhatbar-2b888523a/",
     },
   },
   profileImage: {
     src: "/images/profile/me.jpg",
     alt: "Sahil K. Chhatbar",
-    caption: "Sahil K. Chhatbar — Software Engineer & Builder.",
+    caption: "Sahil K. Chhatbar — Software Developer & Builder.",
     credit: "PORTFOLIO ARCHIVE / SAHIL CHHATBAR",
     aspectRatio: "portrait",
     priority: true,
@@ -106,32 +107,32 @@ export const ABOUT_DATA: AboutData = {
     items: [
       { label: "NAME:", value: "SAHIL K. CHHATBAR" },
       { label: "DATE OF BIRTH:", value: "TUESDAY, 7TH OCT 2003" },
-      { label: "SPECIALTY:", value: "FULL-STACK & AI" },
+      { label: "ROLE:", value: "SOFTWARE DEVELOPER" },
       { label: "LOCATION:", value: "Ahmedabad, Gujarat, India" },
     ],
   },
   manifesto: {
-    title: "1. ENGINEERING PHILOSOPHY",
+    title: "1. PERSONAL PHILOSOPHY",
     description:
-      "I prioritize maintainability, predictable data flow, and minimal runtime surprises. Every abstraction must earn its place in the codebase through measurable simplification or velocity gain.",
+      "Software development is a combination of logic, curiosity, and creativity. I prioritize understanding the problem before jumping into implementation, keeping solutions clear and maintainable.",
     points: [
-      "• Strict type safety as an active design guide.",
-      "• Server-side rendering for speed and crawlability.",
-      "• Accessible, semantic markup from day zero.",
+      "• Technology is a tool to solve real problems and create better user experiences.",
+      "• Strict type safety and predictable client/server state flow.",
+      "• Accessible, semantic, and high-performance interfaces from day zero.",
     ],
   },
   refactoring: {
     title: "2. CONTINUOUS IMPROVEMENT",
     paragraphs: [
-      "Technology is never static. I continually refine existing codebases, eliminating dead branches, upgrading build toolchains, and benchmarking real user performance in production environments.",
-      "From exploring React 19 Server Actions to automating E2E workflows with Playwright, my goal is to remain on the productive frontier of web engineering.",
+      "Technology is never static. I continually refine existing codebases, exploring new frameworks, optimizing rendering pipelines, and automating testing with Playwright and Vitest.",
+      "From integrating AI agents (Claude Code, Codex) to streamlining state synchronization with TanStack Query, my goal is to build software that is both robust and meaningful.",
     ],
   },
   offDuty: {
-    title: "INTERESTS & HOBBIES",
-    badge: "INTERESTS",
+    title: "CREATIVE & ACTIVE INTERESTS",
+    badge: "BEYOND THE SCREEN",
     description:
-      "Outside of coding, Sahil enjoys reading technical books, exploring cinema, audio streaming platforms, fitness tracking, and typography design.",
-    status: "STATUS: ALWAYS LEARNING",
+      "Outside of software development, Sahil enjoys playing badminton, sketching, and exploring glass painting. He also loves watching movies and listening to good music — creative interests that keep curiosity active.",
+    status: "STATUS: ALWAYS CREATING",
   },
 };

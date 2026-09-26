@@ -1,4 +1,4 @@
-import { PROFILE } from "@/data/profile";
+import { SITE_CONFIG } from "@/constants/site";
 import Link from "next/link";
 
 export default function Header() {
@@ -35,7 +35,7 @@ export default function Header() {
           className="group block transition-opacity hover:opacity-95 text-decoration-none min-w-0"
         >
           <h1 className="font-headline text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight uppercase leading-none text-ink-primary drop-shadow-xs whitespace-nowrap">
-            {PROFILE.name}
+            {SITE_CONFIG.name}
           </h1>
         </Link>
       </div>

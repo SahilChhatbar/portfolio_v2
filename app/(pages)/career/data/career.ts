@@ -2,6 +2,7 @@ export interface CareerMilestone {
   year: string;
   headline: string;
   summary: string;
+  logo?: string;
 }
 
 export interface EducationCredential {
@@ -11,6 +12,7 @@ export interface EducationCredential {
   year: string;
   score?: string;
   details: string[];
+  logo?: string;
 }
 
 export interface CareerData {
@@ -31,18 +33,8 @@ export interface CareerData {
   };
   timelineWireTag: string;
   milestones: CareerMilestone[];
-  currentStation: {
-    title: string;
-    headline: string;
-    description: string;
-  };
   pedigreeTag: string;
   education: EducationCredential[];
-  rigorNotice: {
-    title: string;
-    badge: string;
-    description: string;
-  };
 }
 
 export const CAREER_DATA: CareerData = {
@@ -63,76 +55,101 @@ export const CAREER_DATA: CareerData = {
     subtitle:
       "Tracking the growth of Sahil K. Chhatbar across engineering education, professional roles, and key software milestones.",
   },
-  timelineWireTag: "CAREER MILESTONES",
+  timelineWireTag: "TIMELINE",
   milestones: [
+    {
+      year: "JUN 2025 – AUG 2026",
+      headline: "SOFTWARE DEVELOPER AT LAMDA LOGS",
+      logo: "/images/career-education/lamda.png",
+      summary:
+        "Transitioned to full-time Software Developer; architected enterprise modules across Flipspaces, ProView, and Lamda Flow, and established testing suites.",
+    },
+    {
+      year: "JUN 2025",
+      headline: "GRADUATED B.E. IN COMPUTER SCIENCE (AIML)",
+      logo: "/images/career-education/gtu.webp",
+      summary:
+        "Graduated with a Bachelor of Engineering in Computer Science & Engineering (AIML) from New LJ Institute of Engineering and Technology (GTU) with a 9.04 CGPA.",
+    },
+    {
+      year: "JAN 2025 – MAY 2025",
+      headline: "SOFTWARE DEVELOPER INTERN AT LAMDA LOGS",
+      logo: "/images/career-education/lamda.png",
+      summary:
+        "Joined Lamda Logs (formerly Elixir Techne) as Software Developer Intern; contributed to frontend refactoring, UI components, and API integrations.",
+    },
+    {
+      year: "JUN 2024 – AUG 2024",
+      headline: "WORDPRESS DEVELOPER INTERN AT BIG SOCIAL MEDIA",
+      logo: "/images/career-education/bsm.png",
+      summary:
+        "Built and customized live WordPress websites using Elementor, plugins, and custom CSS at Big Social Media Pvt Ltd.",
+    },
+    {
+      year: "2022 – 2024",
+      headline: "EXPLORED WEB DEV & STARTED BUILDING REAL PROJECTS",
+      summary:
+        "Explored modern web development across JavaScript, TypeScript, React, and Next.js, building full-stack applications and interactive user interfaces.",
+    },
     {
       year: "2021",
       headline: "STARTED ENGINEERING JOURNEY",
+      logo: "/images/career-education/gtu.webp",
       summary:
-        "Began Information Technology degree; built first interactive JavaScript applications and algorithmic solutions.",
+        "Began Bachelor of Engineering in Computer Science & Engineering with AIML focus at New LJ Institute of Engineering and Technology (GTU).",
     },
     {
-      year: "2023",
-      headline: "FULL-STACK DEVELOPMENT",
+      year: "2021",
+      headline: "COMPLETED HIGHER SECONDARY EDUCATION (HSC)",
+      logo: "/images/career-education/hbk.png",
       summary:
-        "Deepened expertise in React, Next.js, and Node.js ecosystems; launched personal open-source projects including FitRep.",
+        "Completed HSC in Science stream with 70.15% and commenced his engineering journey.",
     },
     {
-      year: "2024",
-      headline: "AI & TOOLING WORKFLOWS",
+      year: "2019",
+      headline: "COMPLETED SECONDARY EDUCATION (SSC)",
+      logo: "/images/career-education/hbk.png",
       summary:
-        "Integrated AI-assisted coding tools, API design patterns, and automated developer tooling into regular workflows.",
-    },
-    {
-      year: "JAN 2025",
-      headline: "SOFTWARE DEVELOPER INTERN AT LAMDA LOGS",
-      summary:
-        "Joined Lamda Logs as Software Developer Intern; contributed to frontend refactoring, UI components, and API integrations.",
-    },
-    {
-      year: "JUN 2025 – PRESENT",
-      headline: "SOFTWARE DEVELOPER AT LAMDA LOGS",
-      summary:
-        "Promoted to full-time Software Developer; architecting high-performance dashboards, test suites, and backend services.",
+        "Completed SSC at HB Kapadia New High School with 74.00% and a focus on analytical thinking.",
     },
   ],
-  currentStation: {
-    title: "CURRENT ROLE",
-    headline: "LAMDA LOGS • SOFTWARE DEVELOPER (2025 – PRESENT)",
-    description:
-      "Contributing to full-stack codebases, design system standardizations, and automated testing suites.",
-  },
   pedigreeTag: "EDUCATION",
   education: [
     {
-      degree: "Bachelor of Engineering in Information Technology",
-      institution: "Gujarat Technological University",
-      location: "Gujarat, India",
-      year: "2021 – 2025",
-      score: "First Class with Distinction",
+      degree: "Bachelor of Engineering in Computer Science & Engineering (AIML)",
+      institution: "New LJ Institute of Engineering and Technology (GTU)",
+      location: "Ahmedabad, Gujarat, India",
+      year: "2021 – 2025 (Graduated June 2025)",
+      score: "CGPA: 9.04",
+      logo: "/images/career-education/gtu.webp",
       details: [
+        "Affiliated with Gujarat Technological University (GTU) with specialized coursework in Artificial Intelligence & Machine Learning.",
         "Rigorous coursework in Data Structures, Algorithms, Database Management Systems, Computer Networks, and Software Engineering.",
-        "Led developer workshops, hackathon teams, and technical showcase exhibitions.",
-        "Completed capstone engineering projects focusing on real-time web applications and distributed systems.",
+        "Developed full-stack web platforms, real-time audio systems, and fitness analytics platforms during engineering studies.",
       ],
     },
     {
       degree: "Higher Secondary Certificate (HSC) — Science Stream",
-      institution:
-        "Gujarat Secondary and Higher Secondary Education Board",
-      location: "Gujarat, India",
+      institution: "HB Kapadia New High School",
+      location: "Ahmedabad, Gujarat, India",
       year: "2019 – 2021",
-      score: "Distinction",
+      score: "Percentage: 70.15%",
+      logo: "/images/career-education/hbk.png",
       details: [
-        "Core subjects: Physics, Chemistry, Mathematics, and Computer Science.",
-        "Built foundational programming skills in C++ and procedural algorithms.",
+        "Core subjects: Physics, Chemistry, and Mathematics.",
+        "Developed computational problem-solving and algorithmic foundations.",
+      ],
+    },
+    {
+      degree: "Secondary School Certificate (SSC)",
+      institution: "HB Kapadia New High School",
+      location: "Ahmedabad, Gujarat, India",
+      year: "Completed March 2019",
+      score: "Percentage: 74.00%",
+      logo: "/images/career-education/hbk.png",
+      details: [
+        "Completed secondary education with strong fundamentals in Mathematics and Science.",
       ],
     },
   ],
-  rigorNotice: {
-    title: "ENGINEERING FOUNDATIONS",
-    badge: "FOUNDATIONS",
-    description:
-      "Theoretical foundations in algorithm complexity (Big-O), memory management, database normalization, and distributed computer networking inform every real-world engineering decision.",
-  },
 };

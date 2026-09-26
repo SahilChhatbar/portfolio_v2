@@ -12,7 +12,6 @@ export interface ContactTelemetry {
   address: string;
   timezone: string;
   responseTime: string;
-  opportunities: string;
   status: string;
 }
 
@@ -72,16 +71,23 @@ export const CONTACT_DATA: ContactData = {
     {
       platform: "Email",
       label: "Email",
-      url: "mailto:sahilchhatbar248@gmail.com",
+      url: "mailto:sahilchhatbar7@gmail.com",
       icon: ICONS.email,
-      handle: "sahilchhatbar248@gmail.com",
+      handle: "sahilchhatbar7@gmail.com",
+    },
+    {
+      platform: "Phone",
+      label: "Phone Contact",
+      url: "tel:+916351730488",
+      icon: ICONS.phone,
+      handle: "+91 6351730488",
     },
     {
       platform: "LinkedIn",
       label: "LinkedIn Profile",
-      url: "https://www.linkedin.com/in/sahilchhatbar",
+      url: "https://www.linkedin.com/in/sahil-chhatbar-2b888523a/",
       icon: ICONS.linkedin,
-      handle: "linkedin.com/in/sahilchhatbar",
+      handle: "linkedin.com/in/sahil-chhatbar-2b888523a",
     },
     {
       platform: "GitHub",
@@ -93,7 +99,7 @@ export const CONTACT_DATA: ContactData = {
     {
       platform: "Résumé",
       label: "Curriculum Vitae",
-      url: "/sahil-chhatbar-resume.pdf",
+      url: "https://drive.google.com/file/d/1P1rGTNbBAnNkbK5RFlY99kFdfxA6JBTi/view?usp=sharing",
       icon: ICONS.resume,
       handle: "Download Resume (PDF)",
     },
@@ -105,17 +111,17 @@ export const CONTACT_DATA: ContactData = {
   },
   telemetryTag: "AVAILABILITY & DETAILS",
   telemetry: {
-    address: "Ahmedabad / Rajkot, Gujarat, India",
+    address: "Ahmedabad, Gujarat, India",
     timezone: "IST (UTC +5:30)",
     responseTime: "Within 24 hours",
-    opportunities: "OPEN TO OFFERS",
-    status: "OPEN TO NEW FULL-TIME & CONTRACT ROLES",
+    status: "OPEN TO EXPLORING FULL-TIME & FREELANCE OPPORTUNITIES",
   },
   cvBox: {
     title: "CURRICULUM VITAE",
     badge: "RESUME",
     actionText: "DOWNLOAD RESUME (PDF)",
-    actionHref: "/sahil-chhatbar-resume.pdf",
+    actionHref:
+      "https://drive.google.com/file/d/1P1rGTNbBAnNkbK5RFlY99kFdfxA6JBTi/view?usp=sharing",
     description:
       "A comprehensive one-page engineering summary formatted for technical recruiters and engineering leaders.",
   },

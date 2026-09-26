@@ -48,13 +48,10 @@ export default function SkillsPage() {
           >
             <div>
               {/* Category Header */}
-              <div className="flex items-center justify-between border-b-2 border-ink-rule pb-1.5 mb-2">
+              <div className="border-b-2 border-ink-rule pb-1.5 mb-2">
                 <h4 className="font-headline font-black text-lg uppercase text-ink-primary tracking-wide">
                   {cat.category}
                 </h4>
-                <span className="text-xs-compact font-sans font-bold bg-ink-primary text-paper-card px-1.5 py-0.5 uppercase">
-                  {cat.skills.length} ITEMS
-                </span>
               </div>
 
               {/* Description */}
@@ -90,13 +87,6 @@ export default function SkillsPage() {
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* Bottom Tag */}
-            <div className="mt-4 pt-2 border-t border-dashed border-ink-rule/30 text-right">
-              <span className="font-mono text-2xs uppercase tracking-wider text-ink-light">
-                STATUS: VERIFIED
-              </span>
             </div>
           </div>
         ))}

@@ -59,42 +59,56 @@ export default function ContactPage() {
           </div>
 
           <div className="divide-y divide-ink-rule/20 border-t border-b border-ink-rule bg-paper-white">
-            {channels.map((link) => (
-              <div
-                key={link.platform}
-                className="py-3 px-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-paper-card transition-colors"
-              >
-                <div className="flex items-center space-x-3">
-                  <div className="p-2 border border-ink-rule bg-white">
-                    <Icon icon={link.icon} className="w-5 h-5 text-ink-primary" />
-                  </div>
-                  <div>
-                    <div className="font-sans font-bold text-xs uppercase tracking-wider text-ink-primary">
-                      {link.label}
+            {channels.map((link) => {
+              const isPhone = link.platform === "Phone";
+              return (
+                <div
+                  key={link.platform}
+                  className="py-3 px-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:bg-paper-card transition-colors"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="p-2 border border-ink-rule bg-white">
+                      <Icon icon={link.icon} className="w-5 h-5 text-ink-primary" />
                     </div>
-                    <div className="font-serif text-xs text-ink-muted">
-                      {link.handle}
+                    <div>
+                      <div className="font-sans font-bold text-xs uppercase tracking-wider text-ink-primary">
+                        {link.label}
+                      </div>
+                      {!isPhone && (
+                        <div className="font-serif text-xs text-ink-muted">
+                          {link.handle}
+                        </div>
+                      )}
                     </div>
                   </div>
-                </div>
 
-                <div>
-                  <a
-                    href={link.url}
-                    target={link.url.startsWith("http") ? "_blank" : undefined}
-                    rel={
-                      link.url.startsWith("http")
-                        ? "noopener noreferrer"
-                        : undefined
-                    }
-                    className="inline-flex items-center space-x-1 px-3 py-1.5 bg-ink-primary text-paper-bg text-xs font-headline font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
-                  >
-                    <span>OPEN LINK</span>
-                    <Icon icon={ICONS.externalLink} className="w-3.5 h-3.5" />
-                  </a>
+                  <div>
+                    {isPhone ? (
+                      <a
+                        href={link.url}
+                        className="font-mono text-sm sm:text-base font-bold text-ink-primary tracking-wide hover:underline px-1 py-0.5"
+                      >
+                        {link.handle}
+                      </a>
+                    ) : (
+                      <a
+                        href={link.url}
+                        target={link.url.startsWith("http") ? "_blank" : undefined}
+                        rel={
+                          link.url.startsWith("http")
+                            ? "noopener noreferrer"
+                            : undefined
+                        }
+                        className="inline-flex items-center space-x-1 px-3 py-1.5 bg-ink-primary text-paper-bg text-xs font-headline font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
+                      >
+                        <span>OPEN LINK</span>
+                        <Icon icon={ICONS.externalLink} className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Editorial Quote Box */}
@@ -138,17 +152,10 @@ export default function ContactPage() {
                 </span>
               </div>
 
-              <div className="flex justify-between border-b border-dashed border-ink-rule/20 pb-1">
+              <div className="flex justify-between">
                 <span className="text-ink-muted">RESPONSE TIME:</span>
                 <span className="font-bold text-ink-primary">
                   {telemetry.responseTime}
-                </span>
-              </div>
-
-              <div className="flex justify-between">
-                <span className="text-ink-muted">AVAILABILITY:</span>
-                <span className="font-bold text-emerald-800">
-                  {telemetry.opportunities}
                 </span>
               </div>
             </div>

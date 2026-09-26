@@ -30,15 +30,12 @@ export interface ProjectsData {
     nextHref: string;
   };
   projects: ProjectItem[];
-  classifieds: {
-    kicker: string;
+  githubSection: {
+    tag: string;
     headline: string;
     description: string;
-    boxTitle: string;
-    badge: string;
     actionText: string;
     actionHref: string;
-    text: string;
   };
 }
 
@@ -49,7 +46,7 @@ export const PROJECTS_DATA: ProjectsData = {
     pageTitle: "PROJECTS",
     category: "SECTION III • FEATURED PROJECTS",
     subtitle:
-      "Detailed case studies on applications, full-stack platforms, and open-source software.",
+      "Detailed case studies on web platforms, streaming applications, and full-stack software.",
     prevHref: "/experience",
     nextHref: "/skills",
   },
@@ -57,109 +54,102 @@ export const PROJECTS_DATA: ProjectsData = {
     {
       id: "fitrep",
       title: "FitRep",
-      subtitle: "AI-Powered Fitness & Workout Analytics Engine",
-      date: "FEATURED PROJECT",
+      subtitle: "Full-Stack Fitness & Diet Tracking Platform",
+      date: "FITNESS PLATFORM",
       edition: "FULL-STACK APP",
       kicker: "FEATURED PROJECT • FULL-STACK APP",
+      wireTag: "PROJECT 01 • FITNESS PLATFORM",
       leadHeadline:
-        "FITREP: INTELLIGENT WORKOUT TRACKING WITH REAL-TIME ANALYTICS",
+        "FITREP: A PERSONAL PLATFORM FOR TRACKING FITNESS AND PROGRESS",
       description:
-        "An advanced fitness tracking and progression platform designed for athletes and gym enthusiasts. Features custom routine builders, volume overload analytics, and interactive performance charts.",
+        "A full-stack fitness and diet tracking platform built with Next.js SSR, Mantine UI, TanStack Query, and a Node.js/Express/MongoDB backend.",
       fullStory: [
-        "FitRep was architected to eliminate friction in daily workout logging while providing granular analytics on progressive overload, muscular recovery windows, and volume pacing.",
-        "Engineered with Next.js App Router, TypeScript, and Tailwind CSS, the platform delivers instantaneous interaction speeds and seamless offline synchronization.",
-        "Integrates interactive data visualizations, dynamic 1RM estimators, and personalized workout templates backed by a scalable relational data schema.",
+        "Built with Next.js using server-side rendering for the application experience.",
+        "Used Mantine UI to develop reusable and responsive interface components.",
+        "Integrated TanStack Query for efficient server-state management and data fetching.",
+        "Developed a Node.js and Express.js backend with MongoDB for application data and workflows.",
       ],
       tags: [
-        "React",
         "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
+        "React",
+        "Mantine UI",
+        "TanStack Query",
         "Node.js",
-        "PostgreSQL",
-        "Prisma",
+        "Express.js",
+        "MongoDB",
       ],
       image: "/images/projects/fitrep.png",
       imageAlt: "FitRep Application Interface Preview",
       caption:
         "FitRep analytics dashboard tracking weekly volume load and exercise milestones.",
-      liveUrl: "https://github.com/SahilChhatbar",
-      githubUrl: "https://github.com/SahilChhatbar/FitRep",
+      liveUrl: "https://fit-rep.vercel.app/",
+      githubUrl: "https://github.com/SahilChhatbar/fitrep",
       featured: true,
       priority: true,
     },
     {
       id: "radioverse",
       title: "RadioVerse",
-      subtitle: "Global Radio Explorer & Live Audio Stream Network",
+      subtitle: "Full-Stack Radio Streaming Platform",
       date: "AUDIO PLATFORM",
-      edition: "WEB APPLICATION",
+      edition: "FULL-STACK APP",
+      kicker: "WEB APPLICATION • AUDIO PLATFORM",
       wireTag: "PROJECT 02 • AUDIO STREAMING",
-      leadHeadline: "RADIOVERSE: GLOBAL STREAMING FOR LIVE RADIO STATIONS",
+      leadHeadline: "RADIOVERSE: GLOBAL RADIO DISCOVERY AND STREAMING IN ONE PLACE",
       description:
-        "An interactive global radio streaming application connecting listeners to thousands of live stations across continents with low latency buffering, genre filtering, and 3D globe navigation.",
+        "A full-stack radio streaming platform built with Next.js, Redux, and a Node.js/Express/MongoDB backend for discovering and streaming radio stations while supporting accounts and playlists.",
       fullStory: [
-        "RadioVerse harnesses web audio streams and real-time metadata parsing to deliver a rich auditory voyage across music, news, and talk stations globally.",
-        "Features geolocation-based station discovery, custom playlist bookmarking, and low-latency stream buffer management.",
-        "Built with high-fidelity UI components, accessible keyboard shortcuts, and responsive audio visualizers.",
+        "Built using Next.js with isomorphic rendering for a responsive and efficient web application experience.",
+        "Implemented Redux using Flux architecture for predictable client-side state management.",
+        "Developed a Node.js and Express.js backend with MongoDB for stations, accounts, and playlists.",
+        "Integrated the frontend and backend around real-world API communication and streaming workflows.",
       ],
-      tags: [
-        "React",
-        "TypeScript",
-        "Web Audio API",
-        "Tailwind CSS",
-        "REST APIs",
-        "Vite",
-      ],
+      tags: ["Next.js", "React", "Redux", "Node.js", "Express.js", "MongoDB"],
       image: "/images/projects/radioverse.png",
       imageAlt: "RadioVerse Global Stream Interface",
       caption:
-        "RadioVerse station dialer mapping worldwide frequencies across 120+ countries.",
-      liveUrl: "https://github.com/SahilChhatbar",
-      githubUrl: "https://github.com/SahilChhatbar/RadioVerse",
+        "RadioVerse global stream interface supporting stations, accounts, and custom playlists.",
+      liveUrl: "https://radioverse.vercel.app/",
+      githubUrl: "https://github.com/SahilChhatbar/radio-head",
       featured: true,
     },
     {
       id: "cinescope",
       title: "CineScope",
-      subtitle: "Movie Discovery & Cinematic Recommendation Platform",
+      subtitle: "Movie Discovery Platform",
       date: "MEDIA PLATFORM",
       edition: "WEB APPLICATION",
+      kicker: "WEB APPLICATION • MEDIA PLATFORM",
       wireTag: "PROJECT 03 • MEDIA DISCOVERY",
-      leadHeadline: "CINESCOPE: MOVIE CURATION WITH DEEP METADATA & REVIEWS",
+      leadHeadline: "CINESCOPE: MOVIE DISCOVERY THROUGH SEARCH, FILTERING, AND DETAILED PAGES",
       description:
-        "A comprehensive movie and television exploration engine powered by TMDB metadata, offering dynamic trailers, cast filmographies, personalized watchlists, and recommendation feeds.",
+        "A responsive movie discovery site built with React, Mantine UI, and TanStack Query, featuring search, filtering, and detailed movie pages.",
       fullStory: [
-        "CineScope provides cinephiles with instant search indexing, granular genre filtering, and cinematic previews with trailer embeds.",
-        "Leveraged responsive grid layouts, server-side caching, and optimistic UI updates for watchlist state changes.",
-        "Implements advanced search debounce, infinite scroll pagination, and high-performance poster image optimization.",
+        "Built a responsive React interface focused on movie discovery and exploration.",
+        "Used Mantine UI for reusable and consistent interface components.",
+        "Integrated TanStack Query for server-state management and efficient data fetching.",
+        "Implemented search, filtering, and detailed movie pages for exploring movie information.",
       ],
       tags: [
-        "Next.js",
         "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "TMDB API",
-        "Lucide/Iconify",
+        "Mantine UI",
+        "TanStack Query",
       ],
       image: "/images/projects/cinescope.png",
       imageAlt: "CineScope Movie Discovery Dashboard",
       caption:
         "CineScope curated catalog displaying high-resolution movie reels and reviews.",
-      liveUrl: "https://github.com/SahilChhatbar",
-      githubUrl: "https://github.com/SahilChhatbar/CineScope",
+      liveUrl: "https://cinescope-gamma.vercel.app/",
+      githubUrl: "https://github.com/SahilChhatbar/cine-scope",
       featured: true,
     },
   ],
-  classifieds: {
-    kicker: "OPEN SOURCE & EXPERIMENTS",
-    headline: "CONTINUOUS EXPERIMENTATION & REPOSITORIES",
+  githubSection: {
+    tag: "GITHUB REPOSITORIES",
+    headline: "EXPLORE MORE WORK ON GITHUB",
     description:
-      "All featured software projects are built with TypeScript, automated test suites, and optimized rendering pipelines. Additional tools and experiments can be explored on GitHub.",
-    boxTitle: "SOURCE REPOSITORIES",
-    badge: "GITHUB",
-    actionText: "VIEW GITHUB PROFILE",
+      "Checkout and view Sahil's repositories, full-stack projects, and work on GitHub.",
+    actionText: "VIEW GITHUB REPOSITORIES »",
     actionHref: "https://github.com/SahilChhatbar",
-    text: "Visit Sahil's GitHub profile for open-source repositories and experimental code.",
   },
 };

@@ -44,21 +44,22 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "SAHIL K. CHHATBAR — Full-Stack Software Engineer",
+    default: "SAHIL K. CHHATBAR — Software Developer",
     template: "%s | SAHIL K. CHHATBAR",
   },
   description:
-    "Portfolio of Sahil K. Chhatbar. Full-Stack Software Developer specializing in Next.js, React, TypeScript, Node.js, and modern web architectures.",
+    "Portfolio of Sahil K. Chhatbar. Software Developer specializing in React.js, Next.js, TypeScript, and modern web application development.",
   keywords: [
     "Sahil K. Chhatbar",
     "Sahil Chhatbar",
     "Software Developer",
-    "Engineer",
-    "Full-Stack Engineer",
-    "Next.js Portfolio",
-    "React Developer",
-    "TypeScript",
     "Frontend Developer",
+    "Full-Stack Developer",
+    "React.js Developer",
+    "Next.js Portfolio",
+    "TypeScript",
+    "Redux",
+    "TanStack Query",
     "Lamda Logs",
   ],
   authors: [
@@ -74,16 +75,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://sahilchhatbar.dev",
-    title: "SAHIL K. CHHATBAR — Full-Stack Software Engineer",
+    title: "SAHIL K. CHHATBAR — Software Developer",
     description:
-      "Portfolio showcasing projects, experience, skills, and full-stack software development by Sahil K. Chhatbar.",
+      "Portfolio showcasing projects, experience, skills, and web application development by Sahil K. Chhatbar.",
     siteName: "Sahil Chhatbar Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SAHIL K. CHHATBAR — Full-Stack Software Engineer",
+    title: "SAHIL K. CHHATBAR — Software Developer",
     description:
-      "Portfolio showcasing projects, experience, skills, and full-stack software development by Sahil K. Chhatbar.",
+      "Portfolio showcasing projects, experience, skills, and web application development by Sahil K. Chhatbar.",
   },
   robots: {
     index: true,

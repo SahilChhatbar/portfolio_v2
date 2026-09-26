@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import PageContainer from "@/components/layout/PageContainer";
 import Article from "@/components/content/Article";
 import ImageFrame from "@/components/content/ImageFrame";
-import Card from "@/components/content/Card";
 import Divider from "@/components/ui/Divider";
 import { PROJECTS_DATA } from "./data/projects";
 
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProjectsPage() {
-  const { meta, projects, classifieds } = PROJECTS_DATA;
+  const { meta, projects, githubSection } = PROJECTS_DATA;
   const [fitRep, radioVerse, cineScope] = projects;
 
   return (
@@ -106,8 +105,8 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {radioVerse.githubUrl && (
-              <div className="pt-2 border-t border-ink-rule flex gap-2">
+            <div className="pt-2 border-t border-ink-rule flex flex-wrap gap-2">
+              {radioVerse.githubUrl && (
                 <a
                   href={radioVerse.githubUrl}
                   target="_blank"
@@ -116,8 +115,18 @@ export default function ProjectsPage() {
                 >
                   VIEW ON GITHUB »
                 </a>
-              </div>
-            )}
+              )}
+              {radioVerse.liveUrl && (
+                <a
+                  href={radioVerse.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 border border-ink-rule bg-paper-white text-ink-primary text-xs font-headline font-bold uppercase tracking-wider hover:bg-ink-primary/10 transition-colors"
+                >
+                  LIVE DEMO »
+                </a>
+              )}
+            </div>
           </div>
         )}
 
@@ -171,8 +180,8 @@ export default function ProjectsPage() {
               </div>
             </div>
 
-            {cineScope.githubUrl && (
-              <div className="pt-2 border-t border-ink-rule flex gap-2">
+            <div className="pt-2 border-t border-ink-rule flex flex-wrap gap-2">
+              {cineScope.githubUrl && (
                 <a
                   href={cineScope.githubUrl}
                   target="_blank"
@@ -181,41 +190,46 @@ export default function ProjectsPage() {
                 >
                   VIEW ON GITHUB »
                 </a>
-              </div>
-            )}
+              )}
+              {cineScope.liveUrl && (
+                <a
+                  href={cineScope.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 border border-ink-rule bg-paper-white text-ink-primary text-xs font-headline font-bold uppercase tracking-wider hover:bg-ink-primary/10 transition-colors"
+                >
+                  LIVE DEMO »
+                </a>
+              )}
+            </div>
           </div>
         )}
       </div>
 
       <Divider type="single" />
 
-      {/* Bottom Editorial Classifieds Box */}
-      <div className="p-4 bg-paper-card border-2 border-ink-rule grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="md:col-span-2 space-y-1">
+      {/* Bottom GitHub Repositories Banner */}
+      <div className="p-4 bg-paper-card border-2 border-ink-rule flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div className="space-y-1">
           <div className="font-sans font-bold text-xs-compact uppercase tracking-wider text-ink-primary">
-            {classifieds.kicker}
+            {githubSection.tag}
           </div>
           <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
-            {classifieds.headline}
+            {githubSection.headline}
           </h4>
-          <p className="font-serif text-xs leading-relaxed text-ink-body newspaper-columns">
-            {classifieds.description}
+          <p className="font-serif text-xs text-ink-body">
+            {githubSection.description}
           </p>
         </div>
 
-        <div className="md:col-span-1 border-t md:border-t-0 md:border-l border-ink-rule/30 pt-3 md:pt-0 md:pl-4 flex flex-col justify-center">
-          <Card
-            title={classifieds.boxTitle}
-            badge={classifieds.badge}
-            action={{
-              text: classifieds.actionText,
-              href: classifieds.actionHref,
-              external: true,
-            }}
-          >
-            {classifieds.text}
-          </Card>
-        </div>
+        <a
+          href={githubSection.actionHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-4 py-2 bg-ink-primary text-paper-bg text-xs font-headline font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors whitespace-nowrap shrink-0"
+        >
+          {githubSection.actionText}
+        </a>
       </div>
     </PageContainer>
   );

@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageContainer from "@/components/layout/PageContainer";
-import Card from "@/components/content/Card";
-import Divider from "@/components/ui/Divider";
 import { CAREER_DATA } from "./data/career";
 
 export const metadata: Metadata = {
@@ -16,10 +15,8 @@ export default function CareerPage() {
     overview,
     timelineWireTag,
     milestones,
-    currentStation,
     pedigreeTag,
     education,
-    rigorNotice,
   } = CAREER_DATA;
 
   return (
@@ -63,13 +60,25 @@ export default function CareerPage() {
                 {/* Print Milestone Dot */}
                 <div className="absolute -left-1.75 top-1 w-3 h-3 bg-ink-primary border-2 border-paper-white" />
 
-                <div className="flex items-center space-x-2">
-                  <span className="font-mono text-xs font-bold text-ink-primary bg-paper-card px-1.5 py-0.5 border border-ink-rule/30">
-                    {milestone.year}
-                  </span>
-                  <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
-                    {milestone.headline}
-                  </h4>
+                <div className="flex items-start justify-between gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-mono text-xs font-bold text-ink-primary bg-paper-card px-1.5 py-0.5 border border-ink-rule/30">
+                      {milestone.year}
+                    </span>
+                    <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
+                      {milestone.headline}
+                    </h4>
+                  </div>
+                  {milestone.logo && (
+                    <div className="relative w-7 h-7 shrink-0 bg-paper-white border border-ink-rule p-0.5 mt-0.5">
+                      <Image
+                        src={milestone.logo}
+                        alt={milestone.headline}
+                        fill
+                        className="object-contain p-0.5"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <p className="font-serif text-xs sm:text-sm text-ink-body leading-relaxed newspaper-columns">
@@ -77,21 +86,6 @@ export default function CareerPage() {
                 </p>
               </div>
             ))}
-          </div>
-
-          <Divider type="dashed" />
-
-          {/* Current Professional Appointment Summary */}
-          <div className="p-3 border border-ink-rule bg-paper-card space-y-1.5">
-            <div className="font-sans text-xs-compact font-bold uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-0.5">
-              {currentStation.title}
-            </div>
-            <h4 className="font-headline font-bold text-sm uppercase text-ink-primary">
-              {currentStation.headline}
-            </h4>
-            <p className="font-serif text-xs leading-relaxed text-ink-subtle">
-              {currentStation.description}
-            </p>
           </div>
         </div>
 
@@ -121,12 +115,25 @@ export default function CareerPage() {
                   )}
                 </div>
 
-                <h4 className="font-headline font-black text-base uppercase text-ink-primary leading-snug">
-                  {edu.degree}
-                </h4>
-
-                <div className="font-serif italic text-xs text-ink-muted">
-                  {edu.institution} — {edu.location}
+                <div className="flex items-start justify-between gap-2.5">
+                  <div className="space-y-1">
+                    <h4 className="font-headline font-black text-base uppercase text-ink-primary leading-snug">
+                      {edu.degree}
+                    </h4>
+                    <div className="font-serif italic text-xs text-ink-muted">
+                      {edu.institution} — {edu.location}
+                    </div>
+                  </div>
+                  {edu.logo && (
+                    <div className="relative w-9 h-9 shrink-0 bg-paper-card border border-ink-rule p-0.5">
+                      <Image
+                        src={edu.logo}
+                        alt={edu.institution}
+                        fill
+                        className="object-contain p-0.5"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <ul className="space-y-1 text-xs font-serif text-ink-body pt-1">
@@ -140,15 +147,6 @@ export default function CareerPage() {
               </div>
             ))}
           </div>
-
-          {/* Academic Philosophy Notice */}
-          <Card
-            title={rigorNotice.title}
-            badge={rigorNotice.badge}
-            variant="boxed"
-          >
-            <p className="newspaper-columns">{rigorNotice.description}</p>
-          </Card>
         </div>
       </div>
     </PageContainer>
