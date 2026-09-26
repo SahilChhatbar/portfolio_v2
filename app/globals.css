@@ -172,25 +172,6 @@ body {
   }
 }
 
-@keyframes paperTurnBackward {
-  0% {
-    opacity: 0;
-    transform: perspective(1600px) rotateY(10deg) translateX(14px) scale(0.982);
-    filter: brightness(0.9);
-    box-shadow: 12px 0 32px rgba(0, 0, 0, 0.14);
-  }
-  50% {
-    opacity: 0.94;
-    filter: brightness(0.97);
-  }
-  100% {
-    opacity: 1;
-    transform: perspective(1600px) rotateY(0deg) translateX(0) scale(1);
-    filter: brightness(1);
-    box-shadow: none;
-  }
-}
-
 .animate-paper-forward {
   animation: paperTurnForward 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
   transform-origin: left center;
@@ -198,24 +179,8 @@ body {
   backface-visibility: hidden;
 }
 
-.animate-paper-backward {
-  animation: paperTurnBackward 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
-  transform-origin: right center;
-  will-change: transform, opacity, filter;
-  backface-visibility: hidden;
-}
-
-.animate-paper-turn {
-  animation: paperTurnForward 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
-  transform-origin: left center;
-  will-change: transform, opacity, filter;
-  backface-visibility: hidden;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .animate-paper-forward,
-  .animate-paper-backward,
-  .animate-paper-turn {
+  .animate-paper-forward {
     animation: none;
   }
 }

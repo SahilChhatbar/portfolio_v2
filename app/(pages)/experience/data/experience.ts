@@ -76,7 +76,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
       period: "Jun 2025 – Aug 2026",
       type: "Full-Time",
       appointmentTag: "FULL-TIME ROLE",
-      logo: "/images/career-education/lamda.png",
+      logo: "/images/career-education/lamda.svg",
       leadStory:
         "BUILDING PRODUCTION WEB APPLICATIONS, COMPLEX FRONTEND WORKFLOWS & REUSABLE INTERFACES",
       narrative:
@@ -117,7 +117,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
       period: "Jan 2025 – May 2025",
       type: "Internship",
       appointmentTag: "INTERNSHIP",
-      logo: "/images/career-education/lamda.png",
+      logo: "/images/career-education/lamda.svg",
       leadStory:
         "DEVELOPING FRONTEND FOUNDATIONS, API INTEGRATIONS & RESPONSIVE ENTERPRISE APPS",
       narrative:
@@ -149,7 +149,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
       period: "Jun 2024 – Aug 2024",
       type: "Internship",
       appointmentTag: "INTERNSHIP",
-      logo: "/images/career-education/bsm.png",
+      logo: "/images/career-education/bsm.svg",
       leadStory:
         "BUILDING & CUSTOMIZING LIVE WORDPRESS WEBSITES, PLUGINS & RESPONSIVE INTERFACES",
       narrative:
@@ -176,7 +176,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
     description:
       "An enterprise software and technology firm developing developer tooling, client enterprise solutions, and cloud products.",
     headquarters: "LOCATION: AHMEDABAD, GUJARAT, INDIA",
-    logo: "/images/career-education/lamda.png",
+    logo: "/images/career-education/lamda.svg",
   },
   dossiers: [
     {
@@ -185,7 +185,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
       description:
         "An enterprise software and technology firm developing developer tooling, client enterprise solutions, and cloud products.",
       headquarters: "LOCATION: AHMEDABAD, GUJARAT, INDIA",
-      logo: "/images/career-education/lamda.png",
+      logo: "/images/career-education/lamda.svg",
     },
     {
       title: "ABOUT BIG SOCIAL MEDIA",
@@ -193,7 +193,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
       description:
         "BSM Big Social Media is an Ahmedabad-based digital marketing and social media company focused on helping businesses build and manage their digital presence through services including social media marketing, branding, content, SEO/PPC, email marketing, website development, and related digital solutions.",
       headquarters: "LOCATION: AHMEDABAD, GUJARAT, INDIA",
-      logo: "/images/career-education/bsm.png",
+      logo: "/images/career-education/bsm.svg",
     },
   ],
   recommendations: {

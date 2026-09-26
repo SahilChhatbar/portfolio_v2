@@ -1,15 +1,13 @@
 "use client";
 
-import React from "react";
 import { usePathname } from "next/navigation";
-import { useTransition } from "@/context/TransitionContext";
+import React from "react";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const { animationClass } = useTransition();
 
   return (
-    <div key={pathname} className={`w-full ${animationClass}`}>
+    <div key={pathname} className="w-full animate-paper-forward">
       {children}
     </div>
   );

@@ -38,6 +38,8 @@ export interface AboutData {
       emailUrl: string;
       linkedinText: string;
       linkedinUrl: string;
+      moreLinksText: string;
+      moreLinksUrl: string;
     };
   };
   profileImage: {
@@ -78,19 +80,21 @@ export const ABOUT_DATA: AboutData = {
   article: {
     kicker: "BIOGRAPHY & BACKGROUND",
     headline: "SAHIL CHHATBAR: SOFTWARE DEVELOPER",
-    subheadline:
-      "",
-  bioParagraphs: [
-  "Sahil is a Software Developer focused on building responsive, maintainable web applications with React.js, Next.js, TypeScript, and modern frontend technologies. He enjoys problem solving, learning, and turning ideas into practical products.",
-  "His experience spans internships and full-time development, working on production applications, complex interfaces, APIs, state management, performance, accessibility, and testing. He has also built full-stack personal projects across fitness, radio streaming, and movie discovery.",
-  "An academically strong Computer Science graduate with a 9.04 CGPA, Sahil values curiosity, ownership, collaboration, clear thinking, and continuous improvement. He also embraces AI-assisted development to learn, build, and solve problems more effectively."
-  ],
-    quote: "Build with curiosity, solve with clarity, and keep creating beyond the screen.",
+    subheadline: "",
+    bioParagraphs: [
+      "Sahil is a Software Developer focused on building responsive, maintainable web applications with React.js, Next.js, TypeScript, and modern frontend technologies. He enjoys problem solving, learning, and turning ideas into practical products.",
+      "His experience spans internships and full-time development, working on production applications, complex interfaces, APIs, state management, performance, accessibility, and testing. He has also built full-stack personal projects across fitness, radio streaming, and movie discovery.",
+      "An academically strong Computer Science graduate with a 9.04 CGPA, Sahil values curiosity, ownership, collaboration, clear thinking, and continuous improvement. He also embraces AI-assisted development to learn, build, and solve problems more effectively.",
+    ],
+    quote:
+      "Build with curiosity, solve with clarity, and keep creating beyond the screen.",
     actions: {
       emailText: "SEND EMAIL",
       emailUrl: "mailto:sahilchhatbar7@gmail.com",
       linkedinText: "LINKEDIN PROFILE",
       linkedinUrl: "https://www.linkedin.com/in/sahil-chhatbar-2b888523a/",
+      moreLinksText: "MORE LINKS",
+      moreLinksUrl: "/contact",
     },
   },
   profileImage: {

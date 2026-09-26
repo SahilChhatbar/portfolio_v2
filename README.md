@@ -24,9 +24,6 @@ The project follows a modular, collocated page-centric architecture. Each page o
 portfolio/
 ├── app/
 │   ├── (pages)/                  # Route groups for multi-page broadsheet edition
-│   │   ├── about/                # Page 1: Biography, Manifesto, Off-Duty
-│   │   │   ├── data/about.ts     # Localized editorial dataset & types
-│   │   │   └── page.tsx
 │   │   ├── experience/           # Page 2: Commercial roles & Company dossiers
 │   │   │   ├── data/experience.ts
 │   │   │   └── page.tsx
@@ -42,10 +39,12 @@ portfolio/
 │   │   └── contact/              # Page 6: Contact channels & direct outreach
 │   │       ├── data/contact.ts
 │   │       └── page.tsx
+│   ├── data/
+│   │   └── about.ts              # Page 1: Biography & Editorial dataset
 │   ├── favicon.ico
 │   ├── globals.css               # Editorial CSS utilities & Tailwind v4 theme tokens
 │   ├── layout.tsx                # Root layout with fonts, header, nav, analytics
-│   ├── page.tsx                  # Root entry point (renders AboutPage)
+│   ├── page.tsx                  # Root entry point & Page 1: Biography & About
 │   ├── robots.ts                 # SEO robots configuration
 │   ├── sitemap.ts                # Dynamic sitemap generator
 │   └── template.tsx              # Page transition wrapper

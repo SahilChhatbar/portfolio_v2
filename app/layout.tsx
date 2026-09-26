@@ -1,6 +1,5 @@
 import Header from "@/components/layout/Header";
 import Navigation from "@/components/layout/Navigation";
-import { TransitionProvider } from "@/context/TransitionContext";
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
 import {
@@ -116,9 +115,7 @@ export default function RootLayout({
           <Navigation />
 
           {/* Main Portfolio Content */}
-          <main className="flex-1 w-full my-4">
-            <TransitionProvider>{children}</TransitionProvider>
-          </main>
+          <main className="flex-1 w-full my-4">{children}</main>
         </div>
         <Analytics />
       </body>

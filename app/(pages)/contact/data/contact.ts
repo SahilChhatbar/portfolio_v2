@@ -96,13 +96,6 @@ export const CONTACT_DATA: ContactData = {
       icon: ICONS.github,
       handle: "github.com/SahilChhatbar",
     },
-    {
-      platform: "Résumé",
-      label: "Curriculum Vitae",
-      url: "https://drive.google.com/file/d/1P1rGTNbBAnNkbK5RFlY99kFdfxA6JBTi/view?usp=sharing",
-      icon: ICONS.resume,
-      handle: "Download Resume (PDF)",
-    },
   ],
   editorialQuote: {
     headline: "“LET'S BUILD SOMETHING GREAT.”",

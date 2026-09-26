@@ -43,7 +43,7 @@ export default function ProjectsPage() {
               external: true,
             }}
             secondaryLink={{
-              text: "LIVE DEMO",
+              text: "VISIT SITE",
               href: fitRep.liveUrl || "#",
               external: true,
             }}
@@ -123,7 +123,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 border border-ink-rule bg-paper-white text-ink-primary text-xs font-headline font-bold uppercase tracking-wider hover:bg-ink-primary/10 transition-colors"
                 >
-                  LIVE DEMO »
+                  VISIT SITE »
                 </a>
               )}
             </div>
@@ -198,7 +198,7 @@ export default function ProjectsPage() {
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 border border-ink-rule bg-paper-white text-ink-primary text-xs font-headline font-bold uppercase tracking-wider hover:bg-ink-primary/10 transition-colors"
                 >
-                  LIVE DEMO »
+                  VISIT SITE »
                 </a>
               )}
             </div>
