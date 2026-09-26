@@ -80,12 +80,11 @@ export const ABOUT_DATA: AboutData = {
     headline: "SAHIL CHHATBAR: SOFTWARE DEVELOPER",
     subheadline:
       "Specializing in React.js, Next.js, TypeScript, and modern web application development.",
-    bioParagraphs: [
-      "Sahil is a Software Developer focused on building responsive, maintainable, and user-friendly web applications, with a strong interest in frontend engineering, problem solving, and continuous learning.",
-      "He works primarily across modern frontend and full-stack web technologies, with professional experience building production applications using React.js, Next.js, TypeScript, JavaScript, Redux, Redux Toolkit, Zustand, TanStack Query, Tailwind CSS, Material UI, and REST APIs.",
-      "At Lamda Logs, Sahil has contributed across enterprise products including Flipspaces, ProView (OpenDots), and Lamda Flow. His work spans complex forms, data-heavy interfaces, analytics dashboards, reusable UI components, API integrations, application state management, accessibility improvements, performance optimization, and automated testing.",
-      "He enjoys understanding how things work, breaking complex problems into manageable pieces, and turning designs into practical interfaces. His development workflow also incorporates AI agents such as Claude Code, Codex, ChatGPT, and Antigravity."
-    ],
+  bioParagraphs: [
+    "Sahil is a Software Developer focused on building responsive, maintainable, and user-friendly web applications, with a strong interest in frontend engineering, problem solving, and continuous learning. He works primarily with React.js, Next.js, TypeScript, JavaScript, and modern frontend technologies.",
+    "His professional experience spans internships and full-time roles, where he has worked on production web applications, complex forms, data-heavy interfaces, dashboards, reusable UI components, REST API integrations, state management, accessibility, performance optimization, and automated testing. He has also built personal full-stack projects across fitness, radio streaming, and movie discovery.",
+    "Sahil values curiosity, clarity, ownership, collaboration, and continuous learning. He enjoys breaking complex problems into manageable pieces and turning designs into practical interfaces. His workflow also incorporates AI-assisted development tools such as Claude Code, Codex, ChatGPT, and Antigravity."
+  ],
     quote: "Build with curiosity, solve with clarity, and keep creating beyond the screen.",
     actions: {
       emailText: "SEND EMAIL",
