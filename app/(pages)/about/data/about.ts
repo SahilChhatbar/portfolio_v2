@@ -79,7 +79,7 @@ export const ABOUT_DATA: AboutData = {
     kicker: "BIOGRAPHY & BACKGROUND",
     headline: "SAHIL CHHATBAR: SOFTWARE DEVELOPER",
     subheadline:
-      "Specializing in React.js, Next.js, TypeScript, and modern web application development.",
+      "",
   bioParagraphs: [
     "Sahil is a Software Developer focused on building responsive, maintainable, and user-friendly web applications, with a strong interest in frontend engineering, problem solving, and continuous learning. He works primarily with React.js, Next.js, TypeScript, JavaScript, and modern frontend technologies.",
     "His professional experience spans internships and full-time roles, where he has worked on production web applications, complex forms, data-heavy interfaces, dashboards, reusable UI components, REST API integrations, state management, accessibility, performance optimization, and automated testing. He has also built personal full-stack projects across fitness, radio streaming, and movie discovery.",
