@@ -95,7 +95,8 @@ export const PROJECTS_DATA: ProjectsData = {
       edition: "FULL-STACK APP",
       kicker: "WEB APPLICATION • AUDIO PLATFORM",
       wireTag: "PROJECT 02 • AUDIO STREAMING",
-      leadHeadline: "RADIOVERSE: GLOBAL RADIO DISCOVERY AND STREAMING IN ONE PLACE",
+      leadHeadline:
+        "RADIOVERSE: GLOBAL RADIO DISCOVERY AND STREAMING IN ONE PLACE",
       description:
         "A full-stack radio streaming platform built with Next.js, Redux, and a Node.js/Express/MongoDB backend for discovering and streaming radio stations while supporting accounts and playlists.",
       fullStory: [
@@ -121,7 +122,8 @@ export const PROJECTS_DATA: ProjectsData = {
       edition: "WEB APPLICATION",
       kicker: "WEB APPLICATION • MEDIA PLATFORM",
       wireTag: "PROJECT 03 • MEDIA DISCOVERY",
-      leadHeadline: "CINESCOPE: MOVIE DISCOVERY THROUGH SEARCH, FILTERING, AND DETAILED PAGES",
+      leadHeadline:
+        "CINESCOPE: MOVIE DISCOVERY THROUGH SEARCH, FILTERING, AND DETAILED PAGES",
       description:
         "A responsive movie discovery site built with React, Mantine UI, and TanStack Query, featuring search, filtering, and detailed movie pages.",
       fullStory: [
@@ -130,11 +132,7 @@ export const PROJECTS_DATA: ProjectsData = {
         "Integrated TanStack Query for server-state management and efficient data fetching.",
         "Implemented search, filtering, and detailed movie pages for exploring movie information.",
       ],
-      tags: [
-        "React",
-        "Mantine UI",
-        "TanStack Query",
-      ],
+      tags: ["React", "Mantine UI", "TanStack Query"],
       image: "/images/projects/cinescope.png",
       imageAlt: "CineScope Movie Discovery Dashboard",
       caption:
@@ -149,7 +147,7 @@ export const PROJECTS_DATA: ProjectsData = {
     headline: "EXPLORE MORE WORK ON GITHUB",
     description:
       "Checkout and view Sahil's repositories, full-stack projects, and work on GitHub.",
-    actionText: "VIEW GITHUB REPOSITORIES »",
+    actionText: "VIEW GITHUB REPOSITORIES",
     actionHref: "https://github.com/SahilChhatbar",
   },
 };

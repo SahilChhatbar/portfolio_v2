@@ -65,8 +65,11 @@ export default function RootPage() {
                 {firstParagraphRest}
               </p>
 
-              {article.bioParagraphs.slice(1).map((paragraph, index) => (
-                <p key={index} className="newspaper-columns">
+              {article.bioParagraphs.slice(1).map((paragraph, index, arr) => (
+                <p
+                  key={index}
+                  className={`newspaper-columns${index === arr.length - 1 ? " hidden sm:block" : ""}`}
+                >
                   {paragraph}
                 </p>
               ))}

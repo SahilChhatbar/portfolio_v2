@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import PageContainer from "@/components/layout/PageContainer";
 import Card from "@/components/content/Card";
 import Icon from "@/components/icons/Icon";
+import PageContainer from "@/components/layout/PageContainer";
 import { ICONS } from "@/constants/icons";
+import type { Metadata } from "next";
 import { CONTACT_DATA } from "./data/contact";
 
 export const metadata: Metadata = {
@@ -36,7 +36,9 @@ export default function ContactPage() {
       {/* Banner Lead */}
       <div className="border-b-2 border-ink-rule pb-3 mb-6">
         <div className="flex flex-wrap items-center justify-between text-xs font-sans uppercase tracking-wider text-ink-subtle mb-1">
-          <span className="font-bold text-ink-primary">{banner.openWireTag}</span>
+          <span className="font-bold text-ink-primary">
+            {banner.openWireTag}
+          </span>
           <span>{banner.dispatchTag}</span>
         </div>
         <h3 className="font-headline text-2xl sm:text-4xl font-black uppercase text-ink-primary leading-tight">
@@ -68,7 +70,10 @@ export default function ContactPage() {
                 >
                   <div className="flex items-center space-x-3">
                     <div className="p-2 border border-ink-rule bg-white">
-                      <Icon icon={link.icon} className="w-5 h-5 text-ink-primary" />
+                      <Icon
+                        icon={link.icon}
+                        className="w-5 h-5 text-ink-primary"
+                      />
                     </div>
                     <div>
                       <div className="font-sans font-bold text-xs uppercase tracking-wider text-ink-primary">
@@ -93,7 +98,9 @@ export default function ContactPage() {
                     ) : (
                       <a
                         href={link.url}
-                        target={link.url.startsWith("http") ? "_blank" : undefined}
+                        target={
+                          link.url.startsWith("http") ? "_blank" : undefined
+                        }
                         rel={
                           link.url.startsWith("http")
                             ? "noopener noreferrer"
@@ -102,7 +109,10 @@ export default function ContactPage() {
                         className="inline-flex items-center space-x-1 px-3 py-1.5 bg-ink-primary text-paper-bg text-xs font-headline font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
                       >
                         <span>OPEN LINK</span>
-                        <Icon icon={ICONS.externalLink} className="w-3.5 h-3.5" />
+                        <Icon
+                          icon={ICONS.externalLink}
+                          className="w-3.5 h-3.5"
+                        />
                       </a>
                     )}
                   </div>

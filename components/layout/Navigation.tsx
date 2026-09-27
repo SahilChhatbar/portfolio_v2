@@ -61,7 +61,7 @@ export default function Navigation() {
   }, [isOpen]);
 
   const activeItem = NAV_ITEMS.find((item) =>
-    item.href === "/" ? pathname === "/" : pathname.startsWith(item.href)
+    item.href === "/" ? pathname === "/" : pathname.startsWith(item.href),
   );
 
   return (
@@ -115,7 +115,7 @@ export default function Navigation() {
           </div>
 
           <span
-            className={`inline-block text-[10px] text-ink-primary transition-transform duration-200 ease-out transform ${
+            className={`inline-block text-2xs text-ink-primary transition-transform duration-200 ease-out transform ${
               isOpen ? "rotate-180" : "rotate-0"
             }`}
             aria-hidden="true"
