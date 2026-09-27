@@ -38,8 +38,8 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: 'SAHIL K. CHHATBAR — Software Developer',
-    template: '%s | SAHIL K. CHHATBAR',
+    default: 'SAHIL CHHATBAR — Software Developer',
+    template: '%s | SAHIL CHHATBAR',
   },
   description:
     'Portfolio of Sahil Chhatbar. Software Developer specializing in React.js, Next.js, TypeScript, and modern web application development.',
@@ -92,13 +92,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={`${playfair.variable} ${newsreader.variable} ${cinzel.variable} ${geistMono.variable}`}
     >
-      <body
-        suppressHydrationWarning
-        className="bg-paper-bg text-ink-black selection:bg-ink-primary selection:text-paper-bg flex min-h-screen flex-col"
-      >
+      <body className="bg-paper-bg text-ink-black selection:bg-ink-primary selection:text-paper-bg flex min-h-screen flex-col">
         {/* Outer Broadsheet Paper Container */}
         <div className="mx-auto flex w-full max-w-7xl flex-1 flex-col px-3 py-3 sm:px-6 sm:py-6 lg:px-8">
           {/* Header Area */}
@@ -111,6 +107,26 @@ export default function RootLayout({
           <main className="my-4 w-full flex-1">{children}</main>
         </div>
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'ProfilePage',
+              mainEntity: {
+                '@type': 'Person',
+                name: 'Sahil Chhatbar',
+                alternateName: 'Sahil K. Chhatbar',
+                url: 'https://sahilchhatbar.dev',
+                jobTitle: 'Software Developer',
+                sameAs: [
+                  'https://github.com/SahilChhatbar',
+                  'https://www.linkedin.com/in/sahil-chhatbar-2b888523a/',
+                ],
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   )
