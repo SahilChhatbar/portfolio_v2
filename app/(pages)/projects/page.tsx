@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
-import PageContainer from "@/components/layout/PageContainer";
 import Article from "@/components/content/Article";
 import ImageFrame from "@/components/content/ImageFrame";
+import PageContainer from "@/components/layout/PageContainer";
 import Divider from "@/components/ui/Divider";
+import type { Metadata } from "next";
 import { PROJECTS_DATA } from "./data/projects";
 
 export const metadata: Metadata = {
