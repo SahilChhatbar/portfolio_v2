@@ -131,6 +131,9 @@ export default function RootLayout({
                 sameAs: [
                   'https://github.com/SahilChhatbar',
                   'https://www.linkedin.com/in/sahil-chhatbar-2b888523a/',
+                  'https://www.opentalent.in/sahil-k-chhatbar',
+                  'https://in.pinterest.com/sahilchhatbar/',
+                  'https://www.instagram.com/_sahil0703/',
                 ],
               },
             }),
