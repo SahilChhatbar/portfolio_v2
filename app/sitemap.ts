@@ -1,7 +1,7 @@
-import { MetadataRoute } from 'next'
+import type { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://sahilchhatbar.dev'
+  const baseUrl = 'https://sahil-chhatbar.runs-on.dev'
 
   const routes = ['', '/experience', '/projects', '/skills', '/career', '/contact']
 

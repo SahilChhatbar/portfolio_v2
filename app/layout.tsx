@@ -59,24 +59,33 @@ export const metadata: Metadata = {
   authors: [{ name: 'Sahil Chhatbar', url: 'https://github.com/SahilChhatbar' }],
   creator: 'Sahil Chhatbar',
   publisher: 'Sahil Chhatbar',
-  metadataBase: new URL('https://sahilchhatbar.dev'),
+  metadataBase: new URL('https://sahil-chhatbar.runs-on.dev'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://sahilchhatbar.dev',
-    title: 'SAHIL K. CHHATBAR — Software Developer',
+    url: 'https://sahil-chhatbar.runs-on.dev',
+    title: 'SAHIL CHHATBAR — Software Developer',
     description:
       'Portfolio showcasing projects, experience, skills, and web application development by Sahil Chhatbar.',
     siteName: 'Sahil Chhatbar Portfolio',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sahil Chhatbar - Software Developer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SAHIL K. CHHATBAR — Software Developer',
+    title: 'SAHIL CHHATBAR — Software Developer',
     description:
       'Portfolio showcasing projects, experience, skills, and web application development by Sahil Chhatbar.',
+    images: ['/images/og-image.png'],
   },
   robots: {
     index: true,
@@ -117,7 +126,7 @@ export default function RootLayout({
                 '@type': 'Person',
                 name: 'Sahil Chhatbar',
                 alternateName: 'Sahil K. Chhatbar',
-                url: 'https://sahilchhatbar.dev',
+                url: 'https://sahil-chhatbar.runs-on.dev',
                 jobTitle: 'Software Developer',
                 sameAs: [
                   'https://github.com/SahilChhatbar',

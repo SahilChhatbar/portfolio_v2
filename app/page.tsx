@@ -9,7 +9,29 @@ import { ABOUT_DATA } from './data/about'
 
 export const metadata: Metadata = {
   title: 'Sahil Chhatbar',
-  description: 'Biography and profile of Sahil Chhatbar — Full-Stack Software Engineer & Builder.',
+  description:
+    'Biography and profile of Sahil Chhatbar, a Software Developer focused on React.js, Next.js, TypeScript, and modern web application development.',
+  openGraph: {
+    type: 'website',
+    title: 'Sahil Chhatbar',
+    description:
+      'Biography and profile of Sahil Chhatbar, a Software Developer focused on React.js, Next.js, TypeScript, and modern web application development.',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sahil Chhatbar - Software Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sahil Chhatbar',
+    description:
+      'Biography and profile of Sahil Chhatbar, a Software Developer focused on React.js, Next.js, TypeScript, and modern web application development.',
+    images: ['/images/og-image.png'],
+  },
 }
 
 export default function RootPage() {
