@@ -1,30 +1,30 @@
-import React from "react";
-import Pagination from "./Pagination";
+import React from 'react'
+import Pagination from './Pagination'
 
 interface PageContainerProps {
-  pageNumber: number;
-  totalPages?: number;
-  pageTitle?: string;
-  category?: string;
-  subtitle?: string;
-  prevHref?: string;
-  nextHref?: string;
-  children: React.ReactNode;
-  className?: string;
+  pageNumber: number
+  totalPages?: number
+  pageTitle?: string
+  category?: string
+  subtitle?: string
+  prevHref?: string
+  nextHref?: string
+  children: React.ReactNode
+  className?: string
 }
 
 export default function PageContainer({
   pageNumber,
   totalPages = 6,
-  pageTitle = "",
+  pageTitle = '',
   prevHref,
   nextHref,
   children,
-  className = "",
+  className = '',
 }: PageContainerProps) {
   return (
     <div
-      className={`w-full bg-paper-white border border-ink-rule p-3 sm:p-6 lg:p-8 shadow-xs ${className}`}
+      className={`bg-paper-white border-ink-rule w-full border p-3 shadow-xs sm:p-6 lg:p-8 ${className}`}
     >
       {/* Main Content */}
       <div className="w-full">{children}</div>
@@ -38,5 +38,5 @@ export default function PageContainer({
         nextHref={nextHref}
       />
     </div>
-  );
+  )
 }

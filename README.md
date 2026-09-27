@@ -116,16 +116,16 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view th
 
 ## 🛠️ Available Scripts
 
-| Command | Description |
-| :--- | :--- |
-| `npm run dev` | Starts the Next.js development server on port 3000 |
-| `npm run build` | Builds the optimized production application with static pre-rendering |
-| `npm run start` | Runs the built production server locally |
-| `npm run type-check` | Runs the TypeScript compiler (`tsc --noEmit`) to validate all types |
-| `npm run lint` | Runs ESLint to verify code quality and style standards |
+| Command              | Description                                                           |
+| :------------------- | :-------------------------------------------------------------------- |
+| `npm run dev`        | Starts the Next.js development server on port 3000                    |
+| `npm run build`      | Builds the optimized production application with static pre-rendering |
+| `npm run start`      | Runs the built production server locally                              |
+| `npm run type-check` | Runs the TypeScript compiler (`tsc --noEmit`) to validate all types   |
+| `npm run lint`       | Runs ESLint to verify code quality and style standards                |
 
 ---
 
 ## 📄 License
 
-This project is private and maintained by [Sahil K. Chhatbar](https://github.com/SahilChhatbar).
+This project is private and maintained by [Sahil Chhatbar](https://github.com/SahilChhatbar).

@@ -1,14 +1,14 @@
 interface DropCapProps {
-  letter: string;
-  className?: string;
+  letter: string
+  className?: string
 }
 
-export default function DropCap({ letter, className = "" }: DropCapProps) {
+export default function DropCap({ letter, className = '' }: DropCapProps) {
   return (
     <span
-      className={`float-left font-headline font-black text-5xl sm:text-6xl md:text-7xl leading-[0.8] pr-2.5 pt-1 text-ink-primary uppercase select-none ${className}`}
+      className={`font-headline text-ink-primary float-left pt-1 pr-2.5 text-5xl leading-[0.8] font-black uppercase select-none sm:text-6xl md:text-7xl ${className}`}
     >
       {letter}
     </span>
-  );
+  )
 }

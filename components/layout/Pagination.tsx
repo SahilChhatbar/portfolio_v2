@@ -1,11 +1,11 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 interface PaginationProps {
-  current: number;
-  total?: number;
-  title: string;
-  prevHref?: string;
-  nextHref?: string;
+  current: number
+  total?: number
+  title: string
+  prevHref?: string
+  nextHref?: string
 }
 
 export default function Pagination({
@@ -15,27 +15,30 @@ export default function Pagination({
   prevHref,
   nextHref,
 }: PaginationProps) {
-  const hasPrev = current > 1 && Boolean(prevHref);
-  const hasNext = current < total && Boolean(nextHref);
+  const hasPrev = current > 1 && Boolean(prevHref)
+  const hasNext = current < total && Boolean(nextHref)
 
   return (
-    <div className="w-full mt-6 pt-2 pb-1 border-t-2 border-b border-ink-rule flex items-center justify-between text-xs font-serif uppercase tracking-widest text-ink-dark select-none bg-paper-white px-2">
+    <div className="border-ink-rule text-ink-dark bg-paper-white mt-6 flex w-full items-center justify-between border-t-2 border-b px-2 pt-2 pb-1 font-serif text-xs tracking-widest uppercase select-none">
       <div className="w-1/3 text-left">
         {hasPrev && prevHref ? (
           <Link
             href={prevHref}
-            className="hover:underline font-bold text-ink-primary inline-flex items-center space-x-1"
+            className="text-ink-primary inline-flex items-center space-x-1 font-bold hover:underline"
           >
             <span>« PREVIOUS PAGE</span>
           </Link>
         ) : (
-          <span className="invisible select-none" aria-hidden="true">
+          <span
+            className="invisible select-none"
+            aria-hidden="true"
+          >
             « PREVIOUS PAGE
           </span>
         )}
       </div>
 
-      <div className="w-1/3 text-center font-bold text-ink-primary">
+      <div className="text-ink-primary w-1/3 text-center font-bold">
         <span>
           PAGE {current} OF {total} • {title}
         </span>
@@ -45,16 +48,19 @@ export default function Pagination({
         {hasNext && nextHref ? (
           <Link
             href={nextHref}
-            className="hover:underline font-bold text-ink-primary inline-flex items-center space-x-1"
+            className="text-ink-primary inline-flex items-center space-x-1 font-bold hover:underline"
           >
             <span>NEXT PAGE »</span>
           </Link>
         ) : (
-          <span className="invisible select-none" aria-hidden="true">
+          <span
+            className="invisible select-none"
+            aria-hidden="true"
+          >
             NEXT PAGE »
           </span>
         )}
       </div>
     </div>
-  );
+  )
 }

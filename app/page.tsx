@@ -1,32 +1,23 @@
-import Card from "@/components/content/Card";
-import ImageFrame from "@/components/content/ImageFrame";
-import PageContainer from "@/components/layout/PageContainer";
-import Divider from "@/components/ui/Divider";
-import DropCap from "@/components/ui/DropCap";
-import type { Metadata } from "next";
-import Link from "next/link";
-import { ABOUT_DATA } from "./data/about";
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import Card from '@/components/content/Card'
+import ImageFrame from '@/components/content/ImageFrame'
+import PageContainer from '@/components/layout/PageContainer'
+import Divider from '@/components/ui/Divider'
+import DropCap from '@/components/ui/DropCap'
+import { ABOUT_DATA } from './data/about'
 
 export const metadata: Metadata = {
-  title: "Sahil K. Chhatbar",
-  description:
-    "Biography and profile of Sahil K. Chhatbar — Full-Stack Software Engineer & Builder.",
-};
+  title: 'Sahil Chhatbar',
+  description: 'Biography and profile of Sahil Chhatbar — Full-Stack Software Engineer & Builder.',
+}
 
 export default function RootPage() {
-  const {
-    meta,
-    article,
-    profileImage,
-    dossier,
-    manifesto,
-    refactoring,
-    offDuty,
-  } = ABOUT_DATA;
+  const { meta, article, profileImage, dossier, manifesto, refactoring, offDuty } = ABOUT_DATA
 
-  const firstParagraph = article.bioParagraphs[0];
-  const firstLetter = firstParagraph.charAt(0);
-  const firstParagraphRest = firstParagraph.slice(1);
+  const firstParagraph = article.bioParagraphs[0]
+  const firstLetter = firstParagraph.charAt(0)
+  const firstParagraphRest = firstParagraph.slice(1)
 
   return (
     <PageContainer
@@ -39,27 +30,27 @@ export default function RootPage() {
       nextHref={meta.nextHref}
     >
       {/* Top Main Article: Text on Left (65%) + Profile Image on Right (35%) on md (768px+) */}
-      <div className="flex flex-col md:flex-row gap-6 pb-6">
+      <div className="flex flex-col gap-6 pb-6 md:flex-row">
         {/* Left Column (65%): Biography & Editorial */}
-        <div className="w-full md:w-[65%] flex flex-col justify-between">
+        <div className="flex w-full flex-col justify-between md:w-[65%]">
           <div>
             {/* Kicker */}
-            <div className="text-xs-compact font-sans font-bold uppercase tracking-[0.2em] text-ink-primary border-b border-ink-rule pb-0.5 inline-block mb-1">
+            <div className="text-xs-compact text-ink-primary border-ink-rule mb-1 inline-block border-b pb-0.5 font-sans font-bold tracking-[0.2em] uppercase">
               {article.kicker}
             </div>
 
             {/* Main Headline */}
-            <h3 className="font-headline text-2xl sm:text-4xl font-black uppercase text-ink-primary leading-tight mb-2">
+            <h3 className="font-headline text-ink-primary mb-2 text-2xl leading-tight font-black uppercase sm:text-4xl">
               {article.headline}
             </h3>
 
             {/* Sub-headline */}
-            <h4 className="font-serif italic text-base sm:text-lg text-ink-body mb-2">
+            <h4 className="text-ink-body mb-2 font-serif text-base italic sm:text-lg">
               {article.subheadline}
             </h4>
 
             {/* Biography Lead with DropCap */}
-            <div className="mt-3 space-y-3 font-serif text-sm sm:text-base leading-relaxed text-ink-dark">
+            <div className="text-ink-dark mt-3 space-y-3 font-serif text-sm leading-relaxed sm:text-base">
               <p className="newspaper-columns">
                 <DropCap letter={firstLetter} />
                 {firstParagraphRest}
@@ -68,7 +59,7 @@ export default function RootPage() {
               {article.bioParagraphs.slice(1).map((paragraph, index, arr) => (
                 <p
                   key={index}
-                  className={`newspaper-columns${index === arr.length - 1 ? " hidden sm:block" : ""}`}
+                  className={`newspaper-columns${index === arr.length - 1 ? 'hidden sm:block' : ''}`}
                 >
                   {paragraph}
                 </p>
@@ -77,14 +68,14 @@ export default function RootPage() {
           </div>
 
           {/* Quick Contact & Action Buttons */}
-          <div className="mt-6 pt-3 border-t-2 border-ink-rule flex flex-wrap items-center justify-between gap-2">
-            <div className="font-serif italic text-xs text-ink-muted">
+          <div className="border-ink-rule mt-6 flex flex-wrap items-center justify-between gap-2 border-t-2 pt-3">
+            <div className="text-ink-muted font-serif text-xs italic">
               &ldquo;{article.quote}&rdquo;
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <a
                 href={article.actions.emailUrl}
-                className="px-3 py-1.5 bg-ink-primary text-paper-bg text-xs font-headline font-bold uppercase tracking-wider hover:bg-neutral-800 transition-colors"
+                className="bg-ink-primary text-paper-bg font-headline px-3 py-1.5 text-xs font-bold tracking-wider uppercase transition-colors hover:bg-neutral-800"
               >
                 {article.actions.emailText}
               </a>
@@ -92,13 +83,13 @@ export default function RootPage() {
                 href={article.actions.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-1.5 border border-ink-rule bg-paper-white text-ink-primary text-xs font-headline font-bold uppercase tracking-wider hover:bg-ink-primary/10 transition-colors"
+                className="border-ink-rule bg-paper-white text-ink-primary font-headline hover:bg-ink-primary/10 border px-3 py-1.5 text-xs font-bold tracking-wider uppercase transition-colors"
               >
                 {article.actions.linkedinText}
               </a>
               <Link
                 href={article.actions.moreLinksUrl}
-                className="px-3 py-1.5 border border-ink-rule bg-paper-white text-ink-primary text-xs font-headline font-bold uppercase tracking-wider hover:bg-ink-primary/10 transition-colors"
+                className="border-ink-rule bg-paper-white text-ink-primary font-headline hover:bg-ink-primary/10 border px-3 py-1.5 text-xs font-bold tracking-wider uppercase transition-colors"
               >
                 {article.actions.moreLinksText}
               </Link>
@@ -107,7 +98,7 @@ export default function RootPage() {
         </div>
 
         {/* Right Column (35%): Profile Photo Frame & Dossier */}
-        <div className="w-full md:w-[35%] shrink-0 flex flex-col items-center">
+        <div className="flex w-full shrink-0 flex-col items-center md:w-[35%]">
           <ImageFrame
             src={profileImage.src}
             alt={profileImage.alt}
@@ -117,8 +108,8 @@ export default function RootPage() {
           />
 
           {/* Side Bio Card */}
-          <div className="w-full mt-3 p-3 border border-ink-rule bg-paper-card space-y-1.5 text-xs font-serif">
-            <div className="font-sans font-bold text-xs-compact uppercase tracking-wider text-ink-primary border-b border-ink-rule pb-0.5">
+          <div className="border-ink-rule bg-paper-card mt-3 w-full space-y-1.5 border p-3 font-serif text-xs">
+            <div className="text-xs-compact text-ink-primary border-ink-rule border-b pb-0.5 font-sans font-bold tracking-wider uppercase">
               {dossier.title}
             </div>
             {dossier.items.map((item, index) => (
@@ -126,12 +117,12 @@ export default function RootPage() {
                 key={item.label}
                 className={`flex justify-between ${
                   index < dossier.items.length - 1
-                    ? "border-b border-dashed border-ink-rule/20 pb-0.5"
-                    : ""
+                    ? 'border-ink-rule/20 border-b border-dashed pb-0.5'
+                    : ''
                 }`}
               >
                 <span className="text-ink-muted">{item.label}</span>
-                <span className="font-bold text-ink-primary">{item.value}</span>
+                <span className="text-ink-primary font-bold">{item.value}</span>
               </div>
             ))}
           </div>
@@ -141,16 +132,16 @@ export default function RootPage() {
       <Divider type="double" />
 
       {/* Secondary 3-Column Editorial Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-ink-rule/25 pt-2">
+      <div className="divide-ink-rule/25 grid grid-cols-1 gap-6 divide-y pt-2 md:grid-cols-3 md:divide-x md:divide-y-0">
         {/* Column 1: Engineering Philosophy */}
-        <div className="pt-3 md:pt-0 md:pr-4 space-y-2">
-          <h4 className="font-headline font-bold text-lg uppercase text-ink-primary border-b border-ink-rule pb-1">
+        <div className="space-y-2 pt-3 md:pt-0 md:pr-4">
+          <h4 className="font-headline text-ink-primary border-ink-rule border-b pb-1 text-lg font-bold uppercase">
             {manifesto.title}
           </h4>
-          <p className="font-serif text-xs sm:text-sm leading-relaxed text-ink-dark newspaper-columns">
+          <p className="text-ink-dark newspaper-columns font-serif text-xs leading-relaxed sm:text-sm">
             {manifesto.description}
           </p>
-          <ul className="font-serif text-xs space-y-1 text-ink-body pt-1">
+          <ul className="text-ink-body space-y-1 pt-1 font-serif text-xs">
             {manifesto.points.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
@@ -158,14 +149,14 @@ export default function RootPage() {
         </div>
 
         {/* Column 2: Continuous Improvement */}
-        <div className="pt-3 md:pt-0 md:px-4 space-y-2">
-          <h4 className="font-headline font-bold text-lg uppercase text-ink-primary border-b border-ink-rule pb-1">
+        <div className="space-y-2 pt-3 md:px-4 md:pt-0">
+          <h4 className="font-headline text-ink-primary border-ink-rule border-b pb-1 text-lg font-bold uppercase">
             {refactoring.title}
           </h4>
           {refactoring.paragraphs.map((p, index) => (
             <p
               key={index}
-              className="font-serif text-xs sm:text-sm leading-relaxed text-ink-dark newspaper-columns"
+              className="text-ink-dark newspaper-columns font-serif text-xs leading-relaxed sm:text-sm"
             >
               {p}
             </p>
@@ -173,15 +164,17 @@ export default function RootPage() {
         </div>
 
         {/* Column 3: Interests & Hobbies */}
-        <div className="pt-3 md:pt-0 md:pl-4 space-y-2">
-          <Card title={offDuty.title} badge={offDuty.badge} variant="boxed">
+        <div className="space-y-2 pt-3 md:pt-0 md:pl-4">
+          <Card
+            title={offDuty.title}
+            badge={offDuty.badge}
+            variant="boxed"
+          >
             <p className="newspaper-columns">{offDuty.description}</p>
-            <div className="mt-2 text-xs-compact font-mono text-neutral-600">
-              {offDuty.status}
-            </div>
+            <div className="text-xs-compact mt-2 font-mono text-neutral-600">{offDuty.status}</div>
           </Card>
         </div>
       </div>
     </PageContainer>
-  );
+  )
 }

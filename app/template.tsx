@@ -1,14 +1,17 @@
-"use client";
+'use client'
 
-import { usePathname } from "next/navigation";
-import React from "react";
+import React from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  const pathname = usePathname();
+  const pathname = usePathname()
 
   return (
-    <div key={pathname} className="w-full animate-paper-forward">
+    <div
+      key={pathname}
+      className="animate-paper-forward w-full"
+    >
       {children}
     </div>
-  );
+  )
 }

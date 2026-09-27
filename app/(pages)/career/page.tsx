@@ -1,23 +1,16 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import PageContainer from "@/components/layout/PageContainer";
-import { CAREER_DATA } from "./data/career";
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import PageContainer from '@/components/layout/PageContainer'
+import { CAREER_DATA } from './data/career'
 
 export const metadata: Metadata = {
-  title: "Career & Education",
+  title: 'Career & Education',
   description:
-    "Chronological engineering history, academic pedigree, and development timeline of Sahil K. Chhatbar.",
-};
+    'Chronological engineering history, academic pedigree, and development timeline of Sahil Chhatbar.',
+}
 
 export default function CareerPage() {
-  const {
-    meta,
-    overview,
-    timelineWireTag,
-    milestones,
-    pedigreeTag,
-    education,
-  } = CAREER_DATA;
+  const { meta, overview, timelineWireTag, milestones, pedigreeTag, education } = CAREER_DATA
 
   return (
     <PageContainer
@@ -30,47 +23,50 @@ export default function CareerPage() {
       nextHref={meta.nextHref}
     >
       {/* Overview Lead */}
-      <div className="border-b-2 border-ink-rule pb-3 mb-6">
-        <div className="flex flex-wrap items-center justify-between text-xs font-sans uppercase tracking-wider text-ink-subtle mb-1">
-          <span className="font-bold text-ink-primary">{overview.dispatchesTag}</span>
+      <div className="border-ink-rule mb-6 border-b-2 pb-3">
+        <div className="text-ink-subtle mb-1 flex flex-wrap items-center justify-between font-sans text-xs tracking-wider uppercase">
+          <span className="text-ink-primary font-bold">{overview.dispatchesTag}</span>
           <span>{overview.archiveTag}</span>
         </div>
-        <h3 className="font-headline text-2xl sm:text-4xl font-black uppercase text-ink-primary leading-tight">
+        <h3 className="font-headline text-ink-primary text-2xl leading-tight font-black uppercase sm:text-4xl">
           {overview.headline}
         </h3>
-        <p className="font-serif italic text-sm sm:text-base text-ink-subtle mt-1">
+        <p className="text-ink-subtle mt-1 font-serif text-sm italic sm:text-base">
           {overview.subtitle}
         </p>
       </div>
 
       {/* Main 2-Column Broad Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 divide-y lg:divide-y-0 lg:divide-x divide-ink-rule/25">
+      <div className="divide-ink-rule/25 grid grid-cols-1 gap-6 divide-y lg:grid-cols-12 lg:divide-x lg:divide-y-0">
         {/* Left Column (Span 7): Chronological Milestone Dispatches */}
-        <div className="lg:col-span-7 lg:pr-6 space-y-6">
+        <div className="space-y-6 lg:col-span-7 lg:pr-6">
           <div className="flex items-center space-x-2">
-            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
+            <span className="bg-ink-primary text-paper-card text-xs-compact px-2 py-0.5 font-sans font-bold tracking-widest uppercase">
               {timelineWireTag}
             </span>
-            <span className="h-px flex-1 bg-ink-rule"></span>
+            <span className="bg-ink-rule h-px flex-1"></span>
           </div>
 
           <div className="space-y-6">
             {milestones.map((milestone, idx) => (
-              <div key={idx} className="relative pl-6 border-l-2 border-ink-rule space-y-1">
+              <div
+                key={idx}
+                className="border-ink-rule relative space-y-1 border-l-2 pl-6"
+              >
                 {/* Print Milestone Dot */}
-                <div className="absolute -left-1.75 top-1 w-3 h-3 bg-ink-primary border-2 border-paper-white" />
+                <div className="bg-ink-primary border-paper-white absolute top-1 -left-1.75 h-3 w-3 border-2" />
 
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-mono text-xs font-bold text-ink-primary bg-paper-card px-1.5 py-0.5 border border-ink-rule/30">
+                    <span className="text-ink-primary bg-paper-card border-ink-rule/30 border px-1.5 py-0.5 font-mono text-xs font-bold">
                       {milestone.year}
                     </span>
-                    <h4 className="font-headline font-bold text-base uppercase text-ink-primary">
+                    <h4 className="font-headline text-ink-primary text-base font-bold uppercase">
                       {milestone.headline}
                     </h4>
                   </div>
                   {milestone.logo && (
-                    <div className="relative w-7 h-7 shrink-0 bg-paper-white border border-ink-rule p-0.5 mt-0.5">
+                    <div className="bg-paper-white border-ink-rule relative mt-0.5 h-7 w-7 shrink-0 border p-0.5">
                       <Image
                         src={milestone.logo}
                         alt={milestone.headline}
@@ -81,7 +77,7 @@ export default function CareerPage() {
                   )}
                 </div>
 
-                <p className="font-serif text-xs sm:text-sm text-ink-body leading-relaxed newspaper-columns">
+                <p className="text-ink-body newspaper-columns font-serif text-xs leading-relaxed sm:text-sm">
                   {milestone.summary}
                 </p>
               </div>
@@ -90,26 +86,24 @@ export default function CareerPage() {
         </div>
 
         {/* Right Column (Span 5): Academic Chronicle & Credentials */}
-        <div className="lg:col-span-5 lg:pl-6 pt-6 lg:pt-0 space-y-6">
+        <div className="space-y-6 pt-6 lg:col-span-5 lg:pt-0 lg:pl-6">
           <div className="flex items-center space-x-2">
-            <span className="bg-ink-primary text-paper-card px-2 py-0.5 font-sans text-xs-compact font-bold uppercase tracking-widest">
+            <span className="bg-ink-primary text-paper-card text-xs-compact px-2 py-0.5 font-sans font-bold tracking-widest uppercase">
               {pedigreeTag}
             </span>
-            <span className="h-px flex-1 bg-ink-rule"></span>
+            <span className="bg-ink-rule h-px flex-1"></span>
           </div>
 
           <div className="space-y-4">
             {education.map((edu, idx) => (
               <div
                 key={idx}
-                className="p-3.5 border border-ink-rule bg-paper-white space-y-2"
+                className="border-ink-rule bg-paper-white space-y-2 border p-3.5"
               >
-                <div className="flex items-center justify-between border-b border-ink-rule/30 pb-1">
-                  <span className="font-mono text-fine font-bold text-ink-primary">
-                    {edu.year}
-                  </span>
+                <div className="border-ink-rule/30 flex items-center justify-between border-b pb-1">
+                  <span className="text-fine text-ink-primary font-mono font-bold">{edu.year}</span>
                   {edu.score && (
-                    <span className="text-xs-compact font-sans font-bold uppercase bg-ink-primary text-paper-card px-1.5 py-0.5">
+                    <span className="text-xs-compact bg-ink-primary text-paper-card px-1.5 py-0.5 font-sans font-bold uppercase">
                       {edu.score}
                     </span>
                   )}
@@ -117,15 +111,15 @@ export default function CareerPage() {
 
                 <div className="flex items-start justify-between gap-2.5">
                   <div className="space-y-1">
-                    <h4 className="font-headline font-black text-base uppercase text-ink-primary leading-snug">
+                    <h4 className="font-headline text-ink-primary text-base leading-snug font-black uppercase">
                       {edu.degree}
                     </h4>
-                    <div className="font-serif italic text-xs text-ink-muted">
+                    <div className="text-ink-muted font-serif text-xs italic">
                       {edu.institution} — {edu.location}
                     </div>
                   </div>
                   {edu.logo && (
-                    <div className="relative w-9 h-9 shrink-0 bg-paper-card border border-ink-rule p-0.5">
+                    <div className="bg-paper-card border-ink-rule relative h-9 w-9 shrink-0 border p-0.5">
                       <Image
                         src={edu.logo}
                         alt={edu.institution}
@@ -136,10 +130,13 @@ export default function CareerPage() {
                   )}
                 </div>
 
-                <ul className="space-y-1 text-xs font-serif text-ink-body pt-1">
+                <ul className="text-ink-body space-y-1 pt-1 font-serif text-xs">
                   {edu.details.map((detail, dIdx) => (
-                    <li key={dIdx} className="flex items-start space-x-1.5">
-                      <span className="font-bold text-ink-primary font-sans">•</span>
+                    <li
+                      key={dIdx}
+                      className="flex items-start space-x-1.5"
+                    >
+                      <span className="text-ink-primary font-sans font-bold">•</span>
                       <span>{detail}</span>
                     </li>
                   ))}
@@ -150,5 +147,5 @@ export default function CareerPage() {
         </div>
       </div>
     </PageContainer>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
   --background: #f9f7f1;
@@ -37,17 +37,17 @@
   --color-ink-light: #777777;
   --color-ink-faint: #888888;
 
-  --font-headline: var(--font-playfair), Georgia, "Times New Roman", serif;
-  --font-body: var(--font-newsreader), "EB Garamond", "Times New Roman", serif;
-  --font-title: var(--font-cinzel), "Times New Roman", serif;
+  --font-headline: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  --font-body: var(--font-newsreader), 'EB Garamond', 'Times New Roman', serif;
+  --font-title: var(--font-cinzel), 'Times New Roman', serif;
   --font-mono: var(--font-mono), monospace;
 
   /* Override Tailwind's generic stacks so font-serif/font-sans utilities
      resolve to the project's loaded fonts instead of the OS defaults.
      font-serif → Newsreader (body copy, paragraphs, editorial text)
      font-sans  → Cinzel (kicker badges, wire tags, UI labels — all-caps display) */
-  --font-serif: var(--font-newsreader), "EB Garamond", "Times New Roman", serif;
-  --font-sans: var(--font-cinzel), "Times New Roman", serif;
+  --font-serif: var(--font-newsreader), 'EB Garamond', 'Times New Roman', serif;
+  --font-sans: var(--font-cinzel), 'Times New Roman', serif;
 
   /* Custom Text Sizes */
   --text-3xs: 8px;
@@ -61,7 +61,7 @@
 body {
   background-color: var(--paper-bg);
   color: var(--ink-black);
-  font-family: var(--font-body), "Times New Roman", serif;
+  font-family: var(--font-body), 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
@@ -109,15 +109,15 @@ body {
 
 /* Typography */
 .font-headline {
-  font-family: var(--font-headline), Georgia, "Times New Roman", serif;
+  font-family: var(--font-headline), Georgia, 'Times New Roman', serif;
 }
 
 .font-body {
-  font-family: var(--font-body), "EB Garamond", Georgia, serif;
+  font-family: var(--font-body), 'EB Garamond', Georgia, serif;
 }
 
 .font-title {
-  font-family: var(--font-title), "Times New Roman", serif;
+  font-family: var(--font-title), 'Times New Roman', serif;
 }
 
 .font-editorial-mono {
@@ -162,8 +162,7 @@ body {
 @keyframes paperTurnForward {
   0% {
     opacity: 0;
-    transform: perspective(1600px) rotateY(-10deg) translateX(-14px)
-      scale(0.982);
+    transform: perspective(1600px) rotateY(-10deg) translateX(-14px) scale(0.982);
     filter: brightness(0.9);
     box-shadow: -12px 0 32px rgba(0, 0, 0, 0.14);
   }
