@@ -8,12 +8,12 @@ import DropCap from '@/components/ui/DropCap'
 import { ABOUT_DATA } from './data/about'
 
 export const metadata: Metadata = {
-  title: 'Sahil Chhatbar',
+  title: 'Sahil Chhatbar — Software Developer',
   description:
     'Biography and profile of Sahil Chhatbar, a Software Developer focused on React.js, Next.js, TypeScript, and modern web application development.',
   openGraph: {
     type: 'website',
-    title: 'Sahil Chhatbar',
+    title: 'Sahil Chhatbar — Software Developer',
     description:
       'Biography and profile of Sahil Chhatbar, a Software Developer focused on React.js, Next.js, TypeScript, and modern web application development.',
     images: [
@@ -21,13 +21,13 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Sahil Chhatbar - Software Developer',
+        alt: 'Sahil Chhatbar',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Sahil Chhatbar',
+    title: 'Sahil Chhatbar — Software Developer',
     description:
       'Biography and profile of Sahil Chhatbar, a Software Developer focused on React.js, Next.js, TypeScript, and modern web application development.',
     images: ['/images/og-image.png'],
@@ -81,7 +81,8 @@ export default function RootPage() {
               {article.bioParagraphs.slice(1).map((paragraph, index, arr) => (
                 <p
                   key={index}
-                  className="newspaper-columns">
+                  className="newspaper-columns"
+                >
                   {paragraph}
                 </p>
               ))}
