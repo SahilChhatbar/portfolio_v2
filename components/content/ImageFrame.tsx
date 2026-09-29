@@ -4,6 +4,7 @@ interface ImageFrameProps {
   src: string
   alt: string
   priority?: boolean
+  loading?: 'lazy' | 'eager'
   aspectRatio?: 'portrait' | 'landscape' | 'square' | 'wide'
   objectFit?: 'cover' | 'contain'
   className?: string
@@ -13,6 +14,7 @@ export default function ImageFrame({
   src,
   alt,
   priority = false,
+  loading,
   aspectRatio = 'portrait',
   objectFit = 'contain',
   className = '',
@@ -37,6 +39,7 @@ export default function ImageFrame({
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority={priority}
+            loading={loading}
             className={objectFit === 'cover' ? 'object-cover' : 'object-contain'}
           />
         </div>

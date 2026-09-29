@@ -129,7 +129,7 @@ export const PROJECTS_DATA: ProjectsData = {
         'Implemented search, filtering, and detailed movie pages for exploring movie information.',
       ],
       tags: ['React', 'Mantine UI', 'TanStack Query'],
-      image: '/images/projects/cinescope.png',
+      image: '/images/projects/cinescope.jpg',
       imageAlt: 'CineScope Movie Discovery Dashboard',
       caption: 'CineScope curated catalog displaying high-resolution movie reels and reviews.',
       liveUrl: 'https://cinescope-gamma.vercel.app/',

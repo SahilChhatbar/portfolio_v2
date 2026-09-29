@@ -46,6 +46,7 @@ function SecondaryProjectCard({
           src={project.image}
           alt={project.imageAlt}
           aspectRatio="landscape"
+          loading="eager"
         />
       )}
 
