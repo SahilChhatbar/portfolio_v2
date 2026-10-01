@@ -72,18 +72,18 @@ export const ABOUT_DATA: AboutData = {
     totalPages: 6,
     pageTitle: 'ABOUT ME',
     category: 'SECTION I • BIOGRAPHY & BACKGROUND',
-    subtitle: 'A deep dive into my background, technical philosophy, and engineering approach.',
+    subtitle: 'Who I am, how I work, and what I enjoy building.',
     prevHref: '',
     nextHref: '/experience',
   },
   article: {
     kicker: 'BIOGRAPHY & BACKGROUND',
-    headline: 'SAHIL CHHATBAR: SOFTWARE DEVELOPER',
-    subheadline: '',
+    headline: "HI, I'M SAHIL, A FRONTEND-FOCUSED SOFTWARE DEVELOPER",
+    subheadline: 'I build fast, accessible web apps with React, Next.js and TypeScript.',
     bioParagraphs: [
-      'Sahil is a Software Developer focused on building responsive, maintainable web applications with React.js, Next.js, TypeScript, and modern frontend technologies. He enjoys problem solving, learning, and turning ideas into practical products.',
-      'His experience spans internships and full-time development, working on production applications, complex interfaces, APIs, state management, performance, accessibility, and testing. He has also built full-stack personal projects across fitness, radio streaming, and movie discovery.',
-      'An academically strong Computer Science graduate with a 9.04 CGPA, Sahil values curiosity, ownership, collaboration, clear thinking, and continuous improvement. He also embraces AI-assisted development to learn, build, and solve problems more effectively.',
+      'I turn complicated workflows into interfaces that feel simple. At Lamda Logs I shipped features across three enterprise products, from tables that handle large datasets to multi-step forms, dashboards and document viewers, working from Figma designs alongside designers and QA.',
+      'I care about what users feel but rarely notice: fast loads, keyboard and screen-reader support, and code that teammates can pick up without a walkthrough. Outside work I build full-stack side projects: a fitness tracker, a radio streaming app and a movie discovery site.',
+      'I hold a B.E. in Computer Science (AI & ML) with a 9.04 CGPA. I use AI tools like Claude Code and Codex to move faster, while still reviewing and understanding everything I ship.',
     ],
     quote: 'Build with curiosity, solve with clarity, and keep creating beyond the screen.',
     actions: {
@@ -107,33 +107,35 @@ export const ABOUT_DATA: AboutData = {
     title: 'PROFILE SUMMARY',
     items: [
       { label: 'NAME:', value: 'SAHIL K. CHHATBAR' },
-      { label: 'DATE OF BIRTH:', value: 'TUESDAY, 7TH OCT 2003' },
-      { label: 'ROLE:', value: 'SOFTWARE DEVELOPER' },
+      { label: 'DATE:', value: 'THURSDAY, 1ST OCT 2026' },
+      { label: 'ROLE:', value: 'SOFTWARE DEVELOPER (FRONTEND)' },
+      { label: 'FOCUS:', value: 'REACT, NEXT.JS, TYPESCRIPT' },
       { label: 'LOCATION:', value: 'Ahmedabad, Gujarat, India' },
+      { label: 'STATUS:', value: 'OPEN TO FULL-TIME & FREELANCE WORK' },
     ],
   },
   manifesto: {
-    title: '1. PERSONAL PHILOSOPHY',
+    title: '1. HOW I WORK',
     description:
-      'Software development is a combination of logic, curiosity, and creativity. I prioritize understanding the problem before jumping into implementation, keeping solutions clear and maintainable.',
+      'Good software mixes logic, curiosity and creativity. I make sure I understand the problem before I write code, and I keep solutions clear enough for the next person to maintain.',
     points: [
-      '• Technology is a tool to solve real problems and create better user experiences.',
-      '• Strict type safety and predictable client/server state flow.',
-      '• Accessible, semantic, and high-performance interfaces from day zero.',
+      '• Technology is a tool for solving real problems and creating better user experiences.',
+      '• TypeScript and clear data flow keep features predictable as they grow.',
+      '• Accessible, semantic and fast interfaces from the first commit, not as a later fix.',
     ],
   },
   refactoring: {
-    title: '2. CONTINUOUS IMPROVEMENT',
+    title: '2. ALWAYS LEARNING',
     paragraphs: [
-      'Technology is never static. I continually refine existing codebases, exploring new frameworks, optimizing rendering pipelines, and automating testing with Playwright and Vitest.',
-      'From integrating AI agents (Claude Code, Codex) to streamlining state synchronization with TanStack Query, my goal is to build software that is both robust and meaningful.',
+      'I keep refining how I build: trying new frameworks, tuning rendering performance, and writing tests with Vitest and Playwright.',
+      'I use AI agents like Claude Code and Codex for debugging and exploration, and TanStack Query to keep server data in sync, so the end result is software that is reliable and useful.',
     ],
   },
   offDuty: {
-    title: 'CREATIVE & ACTIVE INTERESTS',
+    title: 'BEYOND THE SCREEN',
     badge: 'BEYOND THE SCREEN',
     description:
-      'Outside of software development, Sahil enjoys playing badminton, sketching, and exploring glass painting. He also loves watching movies and listening to good music — creative interests that keep curiosity active.',
+      'Away from the keyboard, I play badminton, sketch, try glass painting, and watch far too many movies. They keep me curious and creative.',
     status: 'STATUS: ALWAYS CREATING',
   },
 }

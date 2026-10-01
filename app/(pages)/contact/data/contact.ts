@@ -54,16 +54,16 @@ export const CONTACT_DATA: ContactData = {
     totalPages: 6,
     pageTitle: 'CONTACT',
     category: 'SECTION VI • GET IN TOUCH',
-    subtitle: 'Direct contact channels, availability details, and resume download.',
+    subtitle: 'How to reach me, when I am available, and where to download my resume.',
     prevHref: '/career',
     nextHref: '',
   },
   banner: {
     openWireTag: 'GET IN TOUCH',
     dispatchTag: 'CONTACT INFO',
-    headline: 'CONTACT SAHIL: GET IN TOUCH',
+    headline: "LET'S TALK",
     subtitle:
-      'Whether you have an engineering opening, a collaboration project, or a technical inquiry — feel free to reach out.',
+      'Have an opening, a project idea or a question? Send me a message and I will get back to you.',
   },
   directoryTag: 'CONTACT CHANNELS',
   channels: [
@@ -98,14 +98,14 @@ export const CONTACT_DATA: ContactData = {
   ],
   editorialQuote: {
     headline: "“LET'S BUILD SOMETHING GREAT.”",
-    subheadline: 'High standards, clear communication, and consistent delivery.',
+    subheadline: 'Clear communication, high standards and reliable delivery.',
   },
   telemetryTag: 'AVAILABILITY & DETAILS',
   telemetry: {
     address: 'Ahmedabad, Gujarat, India',
     timezone: 'IST (UTC +5:30)',
     responseTime: 'Within 24 hours',
-    status: 'OPEN TO EXPLORING FULL-TIME & FREELANCE OPPORTUNITIES',
+    status: 'OPEN TO FULL-TIME & FREELANCE WORK',
   },
   cvBox: {
     title: 'CURRICULUM VITAE',
@@ -113,7 +113,6 @@ export const CONTACT_DATA: ContactData = {
     actionText: 'DOWNLOAD RESUME (PDF)',
     actionHref:
       'https://drive.google.com/file/d/1P1rGTNbBAnNkbK5RFlY99kFdfxA6JBTi/view?usp=sharing',
-    description:
-      'A comprehensive one-page engineering summary formatted for technical recruiters and engineering leaders.',
+    description: 'A one-page summary of my experience, skills and projects.',
   },
 }

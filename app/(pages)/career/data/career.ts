@@ -50,9 +50,8 @@ export const CAREER_DATA: CareerData = {
   overview: {
     dispatchesTag: 'CAREER TIMELINE',
     archiveTag: 'CHRONOLOGICAL HISTORY',
-    headline: 'DEVELOPMENT JOURNEY & ACADEMIC BACKGROUND',
-    subtitle:
-      'Tracking the growth of Sahil across engineering education, professional roles, and key software milestones.',
+    headline: 'MY JOURNEY SO FAR',
+    subtitle: 'How I went from engineering student to working developer.',
   },
   timelineWireTag: 'TIMELINE',
   milestones: [
@@ -61,54 +60,47 @@ export const CAREER_DATA: CareerData = {
       headline: 'SOFTWARE DEVELOPER AT LAMDA LOGS',
       logo: '/images/career-education/lamda.svg',
       summary:
-        'Transitioned to full-time Software Developer; architected enterprise modules across Flipspaces, ProView, and Lamda Flow, and established testing suites.',
+        'Transitioned into a full-time software developer role, delivering scalable enterprise interfaces, performance-optimized data tables, and analytics dashboards while establishing automated testing with Vitest and Playwright.',
     },
     {
       year: 'JUN 2025',
       headline: 'GRADUATED B.E. IN COMPUTER SCIENCE (AIML)',
       logo: '/images/career-education/gtu.svg',
       summary:
-        'Graduated with a Bachelor of Engineering in Computer Science & Engineering (AIML) from New LJ Institute of Engineering and Technology (GTU) with a 9.04 CGPA.',
+        'Finished my Bachelor of Engineering in Computer Science (AI & ML) at New LJ Institute of Engineering and Technology (GTU) with a 9.04 CGPA.',
     },
     {
       year: 'JAN 2025 – MAY 2025',
       headline: 'SOFTWARE DEVELOPER INTERN AT LAMDA LOGS',
       logo: '/images/career-education/lamda.svg',
       summary:
-        'Joined Lamda Logs (formerly Elixir Techne) as Software Developer Intern; contributed to frontend refactoring, UI components, and API integrations.',
+        'Joined Lamda Logs (formerly Elixir Techne) and did my first production React and TypeScript work: UI components and REST API integrations.',
     },
     {
       year: 'JUN 2024 – AUG 2024',
       headline: 'WORDPRESS DEVELOPER INTERN AT BIG SOCIAL MEDIA',
       logo: '/images/career-education/bsm.svg',
       summary:
-        'Built and customized live WordPress websites using Elementor, plugins, and custom CSS at Big Social Media Pvt Ltd.',
+        'My first professional role: building and customizing live client websites with Elementor, plugins and custom CSS.',
     },
     {
       year: '2022 – 2024',
-      headline: 'EXPLORED WEB DEV & STARTED BUILDING REAL PROJECTS',
+      headline: 'TEACHING MYSELF WEB DEVELOPMENT',
       summary:
-        'Explored modern web development across JavaScript, TypeScript, React, and Next.js, building full-stack applications and interactive user interfaces.',
+        'Taught myself modern web development with JavaScript, TypeScript, React and Next.js, and built my first full-stack projects.',
     },
     {
       year: '2021',
-      headline: 'STARTED ENGINEERING JOURNEY',
+      headline: 'FINISHED HSC AND STARTED ENGINEERING',
       logo: '/images/career-education/gtu.svg',
       summary:
-        'Began Bachelor of Engineering in Computer Science & Engineering with AIML focus at New LJ Institute of Engineering and Technology (GTU).',
-    },
-    {
-      year: '2021',
-      headline: 'COMPLETED HIGHER SECONDARY EDUCATION (HSC)',
-      logo: '/images/career-education/hbk.svg',
-      summary: 'Completed HSC in Science stream with 70.15% and commenced his engineering journey.',
+        'Completed HSC (Science) with 70.15% and began my B.E. in Computer Science (AI & ML) at New LJ Institute of Engineering and Technology (GTU).',
     },
     {
       year: '2019',
       headline: 'COMPLETED SECONDARY EDUCATION (SSC)',
       logo: '/images/career-education/hbk.svg',
-      summary:
-        'Completed SSC at HB Kapadia New High School with 74.00% and a focus on analytical thinking.',
+      summary: 'Completed SSC at HB Kapadia New High School with 74%.',
     },
   ],
   pedigreeTag: 'EDUCATION',
@@ -121,9 +113,9 @@ export const CAREER_DATA: CareerData = {
       score: 'CGPA: 9.04',
       logo: '/images/career-education/gtu.svg',
       details: [
-        'Affiliated with Gujarat Technological University (GTU) with specialized coursework in Artificial Intelligence & Machine Learning.',
-        'Rigorous coursework in Data Structures, Algorithms, Database Management Systems, Computer Networks, and Software Engineering.',
-        'Developed full-stack web platforms, real-time audio systems, and fitness analytics platforms during engineering studies.',
+        'Affiliated with Gujarat Technological University (GTU), specializing in Artificial Intelligence & Machine Learning.',
+        'Coursework in Data Structures, Algorithms, Database Management Systems, Computer Networks and Software Engineering.',
+        'Built full-stack projects alongside my studies, including a radio streaming platform and a fitness tracker.',
       ],
     },
     {
@@ -133,10 +125,7 @@ export const CAREER_DATA: CareerData = {
       year: '2019 – 2021',
       score: 'Percentage: 70.15%',
       logo: '/images/career-education/hbk.svg',
-      details: [
-        'Core subjects: Physics, Chemistry, and Mathematics.',
-        'Developed computational problem-solving and algorithmic foundations.',
-      ],
+      details: ['Core subjects: Physics, Chemistry and Mathematics.'],
     },
     {
       degree: 'Secondary School Certificate (SSC)',
@@ -145,9 +134,7 @@ export const CAREER_DATA: CareerData = {
       year: 'Completed March 2019',
       score: 'Percentage: 74.00%',
       logo: '/images/career-education/hbk.svg',
-      details: [
-        'Completed secondary education with strong fundamentals in Mathematics and Science.',
-      ],
+      details: ['Built my foundation in Mathematics and Science.'],
     },
   ],
 }

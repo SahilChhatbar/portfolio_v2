@@ -55,17 +55,16 @@ export const EXPERIENCE_DATA: ExperienceData = {
     totalPages: 6,
     pageTitle: 'EXPERIENCE',
     category: 'SECTION II • WORK EXPERIENCE',
-    subtitle:
-      'A detailed record of professional software development roles, product contributions, and production work.',
+    subtitle: 'Where I have worked, what I built, and the results.',
     prevHref: '/',
     nextHref: '/projects',
   },
   banner: {
     fieldReport: 'WORK EXPERIENCE',
     correspondence: 'PROFESSIONAL HISTORY',
-    headline: 'COMMERCIAL SOFTWARE & WEB DEVELOPMENT',
+    headline: 'REAL PRODUCTS, REAL USERS',
     subtitle:
-      'Production web applications, component architecture, and CMS platforms across Lamda Logs and Big Social Media.',
+      'Frontend work on production applications at Lamda Logs, and live client websites at Big Social Media.',
   },
   roles: [
     {
@@ -77,17 +76,19 @@ export const EXPERIENCE_DATA: ExperienceData = {
       type: 'Full-Time',
       appointmentTag: 'FULL-TIME ROLE',
       logo: '/images/career-education/lamda.svg',
-      leadStory:
-        'BUILDING PRODUCTION WEB APPLICATIONS, COMPLEX FRONTEND WORKFLOWS & REUSABLE INTERFACES',
+      leadStory: 'ENGINEERING HIGH-PERFORMANCE, ACCESSIBLE FRONTEND SYSTEMS ACROSS ENTERPRISE PLATFORMS',
       narrative:
-        'As a Software Developer at Lamda Logs, Sahil contributed to major client and in-house enterprise products including Flipspaces, ProView (OpenDots), and Lamda Flow, developing complex workflows, high-performance dashboards, and testing suites.',
+        'Delivered core frontend architecture across multiple production enterprise applications—spanning data-heavy management systems, interactive analytics dashboards, complex workflow builders, and document inspection tools in close collaboration with product designers and QA.',
       highlights: [
-        'Flipspaces: Optimized large data tables by 40% using virtualization for efficient rendering, Redux for complex client-side state management, and TanStack Query for server-state synchronization.',
-        'Flipspaces: Built multi-step forms from Figma wireframes using Material UI, implementing Zod/Yup validation, Save as Draft functionality, complex form state management, and status steppers.',
-        'Flipspaces: Developed dynamic Order Details workflows, Order Attachments, and PDF & Image integration, leveraging PDF Workers and lazy loading for 20% load performance gains.',
-        'ProView (OpenDots): Improved production modules by fixing UI and accessibility issues (ARIA & semantic HTML), and engineered interactive analytics dashboards with Recharts and Tailwind CSS.',
-        'Lamda Flow: Developed enterprise modules from Figma wireframes using Tailwind CSS, Headless UI, Rizz UI, TanStack Query, and Framer Motion within an Agile/Scrum Linear workflow.',
-        'Testing & AI Tooling: Wrote unit tests in Vitest and E2E tests in Playwright; leveraged AI agents (Claude Code, Codex) to accelerate development and debugging.',
+        'Engineered large-scale data tables handling high-volume datasets using row virtualization, cutting rendering overhead by 40% while synchronizing client and server state via Redux and TanStack Query.',
+        'Architected multi-step form workflows with Material UI and Zod/Yup schema validation, featuring persistent draft saving and dynamic progress steppers to eliminate data loss across complex processes.',
+        'Built modular order management and asset inspection interfaces with Tailwind CSS and Material UI, robustly handling deep navigation hierarchies and complex edge-case states.',
+        'Implemented in-app document and image viewing using PDF Workers, lazy loading, and dynamic code splitting, accelerating asset load performance by 20%.',
+        'Developed real-time analytics and reporting dashboards with Recharts, Material UI, and Tailwind CSS, utilizing compute memoization and custom hooks to prevent unnecessary re-renders.',
+        'Audited and resolved core web accessibility barriers (ARIA landmarks, keyboard navigation, semantic HTML), ensuring full WCAG compliance and seamless responsive behavior across all viewports.',
+        'Created scalable CRUD enterprise modules with Tailwind CSS, Headless UI, and Rizz UI integrated via TanStack Query, enhancing user experience with smooth Framer Motion micro-interactions.',
+        'Built robust end-to-end testing suites with Playwright and unit tests with Vitest covering critical business journeys, significantly lowering regression risks during production releases.',
+        'Collaborated in fast-paced Agile sprints tracked in Linear, driving rapid feature iterations and thorough code reviews supported by AI developer tooling (Claude Code, Codex).',
       ],
       technologies: [
         'React.js',
@@ -118,14 +119,13 @@ export const EXPERIENCE_DATA: ExperienceData = {
       type: 'Internship',
       appointmentTag: 'INTERNSHIP',
       logo: '/images/career-education/lamda.svg',
-      leadStory: 'DEVELOPING FRONTEND FOUNDATIONS, API INTEGRATIONS & RESPONSIVE ENTERPRISE APPS',
+      leadStory: 'BUILDING PRODUCTION-GRADE REACT & TYPESCRIPT INTERFACES',
       narrative:
-        'During this 5-month internship, Sahil gained hands-on experience building enterprise web applications, implementing REST API integrations, and mastering modern state management and data fetching patterns.',
+        'Accelerated from academic foundations to building enterprise web features within a live agile team, delivering REST API integrations, responsive component systems, and state synchronization.',
       highlights: [
-        'Gained hands-on experience with JavaScript, TypeScript, HTML5, CSS, React, Redux, Zustand, TanStack Query, and multiple UI libraries.',
-        'Built REST API integrations for enterprise web applications with robust error handling.',
-        'Developed responsive UI customizations and contributed to production-oriented frontend development.',
-        'Worked with modern frontend state-management and data-fetching patterns within collaborative engineering environments.',
+        'Developed robust REST API integrations with comprehensive error handling and optimistic UI updates for enterprise client solutions.',
+        'Built and styled reusable, mobile-responsive UI components from Figma design specifications using modern CSS frameworks.',
+        'Implemented scalable client and server state management patterns using Redux, Zustand, and TanStack Query across production codebases.',
       ],
       technologies: [
         'JavaScript',
@@ -149,14 +149,14 @@ export const EXPERIENCE_DATA: ExperienceData = {
       type: 'Internship',
       appointmentTag: 'INTERNSHIP',
       logo: '/images/career-education/bsm.svg',
-      leadStory: 'BUILDING & CUSTOMIZING LIVE WORDPRESS WEBSITES, PLUGINS & RESPONSIVE INTERFACES',
+      leadStory: 'DELIVERING RESPONSIVE WEB SOLUTIONS FOR CLIENTS',
       narrative:
-        'During this internship at Big Social Media, Sahil worked on real, live production WordPress websites, building custom pages with Elementor, extending functionality via plugins, customizing themes, and implementing custom CSS to guarantee responsive consistency across all devices.',
+        'Developed and deployed live WordPress websites for client campaigns, crafting custom responsive layouts, optimizing CMS structures, and tailoring bespoke CSS styling.',
       highlights: [
-        'Built and customized live WordPress websites, translating design layouts into responsive pages using Elementor.',
-        'Extended site functionality using WordPress plugins, customized themes, and organized CMS content structure.',
-        'Implemented custom CSS and frontend adjustments to refine layouts, typography, and mobile/tablet responsiveness.',
-        'Troubleshot plugin, layout, and styling issues on live production websites to ensure visual and functional consistency.',
+        'Transformed design mockups into pixel-perfect, responsive client websites using Elementor and modern web standards.',
+        'Customized WordPress themes and integrated specialized plugins to enhance site functionality and content management workflows.',
+        'Authored custom CSS to ensure fluid responsiveness, typography hierarchy, and cross-browser consistency.',
+        'Conducted testing and debugging across live client sites to resolve layout, performance, and plugin conflicts.',
       ],
       technologies: [
         'WordPress',
@@ -172,7 +172,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
     title: 'ABOUT LAMDA LOGS',
     companyName: 'LAMDA LOGS (FORMERLY ELIXIR TECHNE)',
     description:
-      'An enterprise software and technology firm developing developer tooling, client enterprise solutions, and cloud products.',
+      'An Ahmedabad-based software company building developer tools, enterprise client solutions and cloud products.',
     headquarters: 'LOCATION: AHMEDABAD, GUJARAT, INDIA',
     logo: '/images/career-education/lamda.svg',
   },
@@ -181,7 +181,7 @@ export const EXPERIENCE_DATA: ExperienceData = {
       title: 'ABOUT LAMDA LOGS',
       companyName: 'LAMDA LOGS (FORMERLY ELIXIR TECHNE)',
       description:
-        'An enterprise software and technology firm developing developer tooling, client enterprise solutions, and cloud products.',
+        'An Ahmedabad-based software company building developer tools, enterprise client solutions and cloud products.',
       headquarters: 'LOCATION: AHMEDABAD, GUJARAT, INDIA',
       logo: '/images/career-education/lamda.svg',
     },
@@ -189,17 +189,17 @@ export const EXPERIENCE_DATA: ExperienceData = {
       title: 'ABOUT BIG SOCIAL MEDIA',
       companyName: 'BIG SOCIAL MEDIA PVT LTD (BSM)',
       description:
-        'BSM Big Social Media is an Ahmedabad-based digital marketing and social media company focused on helping businesses build and manage their digital presence through services including social media marketing, branding, content, SEO/PPC, email marketing, website development, and related digital solutions.',
+        'An Ahmedabad-based digital marketing agency offering social media, branding, SEO, email marketing and website development.',
       headquarters: 'LOCATION: AHMEDABAD, GUJARAT, INDIA',
       logo: '/images/career-education/bsm.svg',
     },
   ],
   recommendations: {
-    title: 'RESUME & REFERENCES',
+    title: 'RESUME',
     badge: 'RESUME',
     actionText: 'DOWNLOAD RESUME (PDF)',
     actionHref:
       'https://drive.google.com/file/d/1P1rGTNbBAnNkbK5RFlY99kFdfxA6JBTi/view?usp=sharing',
-    text: "Download Sahil's verified resume for complete work history, technical stack details, and references.",
+    text: 'Want the full details? Download my one-page resume for work history, skills and projects.',
   },
 }

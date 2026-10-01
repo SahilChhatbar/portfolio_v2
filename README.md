@@ -98,7 +98,7 @@ Clone the repository and install dependencies:
 
 ```bash
 git clone https://github.com/SahilChhatbar/portfolio_v2.git
-cd portfolio
+cd portfolio_v2
 npm install
 ```
 
@@ -128,4 +128,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view th
 
 ## 📄 License
 
-This project is private and maintained by [Sahil Chhatbar](https://github.com/SahilChhatbar).
+This is a personal portfolio, maintained by [Sahil Chhatbar](https://github.com/SahilChhatbar).

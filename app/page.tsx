@@ -78,7 +78,7 @@ export default function RootPage() {
                 {firstParagraphRest}
               </p>
 
-              {article.bioParagraphs.slice(1).map((paragraph, index, arr) => (
+              {article.bioParagraphs.slice(1).map((paragraph, index) => (
                 <p
                   key={index}
                   className="newspaper-columns"
