@@ -112,7 +112,7 @@ export const CONTACT_DATA: ContactData = {
     badge: 'RESUME',
     actionText: 'DOWNLOAD RESUME (PDF)',
     actionHref:
-      'https://drive.google.com/file/d/1P1rGTNbBAnNkbK5RFlY99kFdfxA6JBTi/view?usp=sharing',
+      'https://drive.google.com/file/d/1U-v3jzXz-zQBJmZvlDpBHAvuu0QgZsNr/view?usp=drivesdk',
     description: 'A one-page summary of my experience, skills and projects.',
   },
 }
