@@ -107,7 +107,6 @@ export const ABOUT_DATA: AboutData = {
     title: 'PROFILE SUMMARY',
     items: [
       { label: 'NAME:', value: 'SAHIL K. CHHATBAR' },
-      { label: 'DATE:', value: 'THURSDAY, 1ST OCT 2026' },
       { label: 'ROLE:', value: 'SOFTWARE DEVELOPER (FRONTEND)' },
       { label: 'FOCUS:', value: 'REACT, NEXT.JS, TYPESCRIPT' },
       { label: 'LOCATION:', value: 'Ahmedabad, Gujarat, India' },
@@ -133,7 +132,7 @@ export const ABOUT_DATA: AboutData = {
   },
   offDuty: {
     title: 'BEYOND THE SCREEN',
-    badge: 'BEYOND THE SCREEN',
+    badge: 'LIFE AWAY FROM HUSTLE',
     description:
       'Away from the keyboard, I play badminton, sketch, try glass painting, and watch far too many movies. They keep me curious and creative.',
     status: 'STATUS: ALWAYS CREATING',
